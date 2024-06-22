@@ -1,0 +1,20 @@
+{
+  "locales": ["en", "id", "kh", "ms", "th", "vi"],
+  "defaultLocale": "en",
+  "pages": {
+    "*": [
+      "common",
+      "productsSection",
+      "newProductsShowcase",
+      "industriesSlider",
+      "projectsSlider"
+    ],
+    "/privacy-policy": ["privacy-policy"],
+    "/quality": ["quality"],
+    "/resources": ["resources"],
+    "/contact": ["contact"],
+    "/products": ["products"],
+    "/sub-products": ["sub-products", "products"],
+    "/about": ["about"]
+  }
+}

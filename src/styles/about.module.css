@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  height: 100%;
+  padding-top: 100vh;
+}
+
+.bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* transform: translateY(-50%); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+/* .text-wrap {
+} */
+
+.text {
+  display: block;
+  position: relative;
+  height: 100vh;
+  /* font-size: 30px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 900;
+  color: white; */
+}

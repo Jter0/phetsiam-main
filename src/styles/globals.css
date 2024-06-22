@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.container-size {
+  @apply w-[95%] md:max-w-[1240px] mx-auto;
+}
+
+body::-webkit-scrollbar-thumb {
+  display: none !important;
+}
+
+.product-overlay {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.product-card {
+  box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.1),
+    0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-duration: 0.15s !important;
+}
+
+#sponsers-slider .swiper-container {
+  width: 100%;
+  height: auto;
+}
+
+#sponsers-slider .swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* override swipers transition */
+#sponsers-slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  margin: 0 auto;
+}
+
+.why-us-section-bg-img {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(/img/chose-section-bg-img.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.products-bg-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.showcase-overlay-active {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.our-project-card-overlay {
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  scroll-behavior: smooth;
+}
+
+.main > div {
+  width: 100vw;
+  height: 100vh;
+  background-color: orange;
+}
+
+.products-slider {
+  padding-top: 40px !important;
+  padding-bottom: 80px !important;
+}
+
+.projects-slider {
+  padding-top: 40px !important;
+  padding-bottom: 80px !important;
+}
+
+/* Industries Slider */
+
+/* Product Showcase Slider */
+.product-showcase-slider.swiper-backface-hidden .swiper-slide {
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: flex-end !important;
+  transition: all 200ms linear;
+  /* transform: scale(0.8); */
+}
+
+/* Swiper Carousal Fade Effect */
+.swiper-fade.swiper-free-mode .swiper-slide {
+  transition-timing-function: ease-out;
+}
+
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+
+.swiper-fade .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+
+.swiper-fade .swiper-slide-active {
+  pointer-events: auto;
+}
+
+.swiper-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+
+.product-showcase-slider
+  .swiper-slide
+  .product-showcase-slide
+  .product-showcase-slide-overlay {
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.product-showcase-slider.swiper-autoheight .swiper-wrapper {
+  transition: all 0.3s ease-in-out;
+  align-items: flex-end !important;
+  height: 28.3vw !important;
+}
+
+.product-showcase-slider.swiper-backface-hidden .swiper-slide {
+  height: 26.1vw !important;
+  width: 38.64vw !important;
+}
+
+.product-showcase-slider.swiper-backface-hidden
+  .swiper-slide.swiper-slide-active {
+  height: 28.3vw !important;
+}
+
+.product-showcase-text-slider {
+  width: 38.64vw !important;
+}
+
+.product-showcase-slider .swiper-slide .product-showcase-slide {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.product-showcase-slider
+  .swiper-slide-active
+  .product-showcase-slide
+  .product-showcase-slide-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.Dropdown-root .Dropdown-control {
+  background-color: transparent;
+  border: none;
+  padding-block: 14px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-inline: 20px;
+  padding-right: 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.Dropdown-root:hover .Dropdown-control {
+  color: #0fa490;
+}
+
+.Dropdown-root:hover ~ svg {
+  color: #0fa490;
+}
+
+.Dropdown-arrow-wrapper {
+  display: none;
+}
+
+.Dropdown-root ~ svg {
+  color: #fff;
+}
+
+.Dropdown-root.is-open .Dropdown-placeholder {
+  color: #0fa490;
+}
+
+.Dropdown-root.is-open ~ svg {
+  color: #0fa490;
+}
+
+.Dropdown-placeholder {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: inherit;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swiper-slide-active .play-btn {
+  color: #0f4c81;
+}
+
+.Dropdown-menu {
+  left: 10px;
+}
+aa-ItemIcon {
+  background: none !important;
+}
+aa-ItemIcon--picture {
+  background: none !important;
+}
+aa-ItemIcon--alignTop {
+  background: none !important;
+}
+
+@media (max-width: 1550px) {
+  .container-secondary {
+    --space-on-one-side: calc((100vw - 90%) / 2);
+  }
+}
+
+@media (max-width: 1100px) {
+  .Dropdown-root .Dropdown-control {
+    padding-block: 10px;
+    padding-left: 10px;
+  }
+
+  .Dropdown-placeholder {
+    font-size: 18px;
+    width: 45px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .product-showcase-slider.swiper-backface-hidden
+    .swiper-slide.swiper-slide-active,
+  .product-showcase-slider.swiper-autoheight .swiper-wrapper {
+    height: 400px !important;
+  }
+
+  .product-showcase-slider.swiper-backface-hidden .swiper-slide {
+    height: 400px !important;
+    width: 100% !important;
+  }
+
+  .product-showcase-slider.swiper-backface-hidden .swiper-slide svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .product-showcase-text-slider {
+    width: 600px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-showcase-slider.swiper-backface-hidden
+    .swiper-slide.swiper-slide-active,
+  .product-showcase-slider.swiper-autoheight .swiper-wrapper {
+    height: 400px !important;
+  }
+
+  .product-showcase-slider.swiper-backface-hidden .swiper-slide {
+    height: 400px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .product-showcase-text-slider {
+    width: 400px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-showcase-text-slider {
+    width: 100vw !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .Dropdown-placeholder {
+    font-size: 16px;
+    width: 40px;
+  }
+}
+
+.input {
+  @apply outline-none;
+}
+
+.formInput {
+  padding: 0 !important;
+}
+
+.aa-SubmitIcon,
+.aa-InputWrapperPrefix {
+  display: none !important;
+  outline: none !important;
+}
+
+.aa-Input {
+  outline: none !important;
+  color: white !important;
+}
+
+.aa-DetachedSearchButton {
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+.aa-Panel {
+  outline: none !important;
+  width: 500px !important;
+  z-index: 999px !important;
+}
+.aa-Source {
+  z-index: 10 !important;
+}
+.background-container {
+  transition: background-image 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  /* Add other styling properties as per your design */
+}
+
+@keyframes clip-path-anim {
+  0% {
+    clip-path: circle(0 at var(--position));
+  }
+  100% {
+    clip-path: circle(200% at var(--position));
+  }
+}
+
+@keyframes clip-path-anim-rev {
+  0% {
+    clip-path: circle(200% at var(--position));
+  }
+  100% {
+    clip-path: circle(0 at var(--position));
+  }
+}
+
+.testQ {
+  --position: center;
+  clip-path: circle(0);
+
+  &.is-active {
+    animation: clip-path-anim 1.5s ease forwards;
+  }
+
+  &:not(.is-active),
+  &.non-active {
+    animation: clip-path-anim-rev 0.5s ease forwards;
+  }
+}
+
+.bg-animation {
+  animation: bg-animation 0.6s ease-in forwards;
+}
+
+.bg-animation-previous {
+  animation: bg-animation-previous 0.6s ease-in forwards;
+}
+
+video.hide-media-controls::-webkit-media-controls {
+  display: none;
+}
+
+@keyframes bg-animation-previous {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bg-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
