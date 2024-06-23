@@ -19,7 +19,7 @@ const searchClient = algoliasearch(
   "aff156b888f8ebf2f31f02b289736078"
 );
 
-const options = ["EN", "TH", "ID", "MS", "VI", "KH"];
+const options = ["EN", "TH", "ID", "MS", "VI", "KH", "CN"];
 
 const item = {
   hidden: { y: -30, opacity: 0 },
