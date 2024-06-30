@@ -1,5 +1,19 @@
 import { PropsWithChildren, useEffect } from "react";
 import { useRouter } from "next/router";
+import { GoogleTagManager } from '@next/third-parties/google'
+ 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <GoogleTagManager gtmId="GTM-M2TK8GLR	" />
+      <body>{children}</body>
+    </html>
+  )
+}
 
 const Layout = ({ children }: PropsWithChildren) => {
   const router = useRouter();
