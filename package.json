@@ -16,6 +16,7 @@
     "@formkit/auto-animate": "^0.8.2",
     "@gsap/react": "^2.1.1",
     "@next/bundle-analyzer": "^14.2.3",
+    "@next/third-parties": "^14.2.4",
     "@studio-freight/lenis": "^1.0.42",
     "@uidotdev/usehooks": "^2.4.1",
     "@web3forms/react": "^1.1.3",
