@@ -4,11 +4,6 @@ import useTranslation from "next-translate/useTranslation";
 import Seo from "@/components/Seo";
 import Layout from "@/components/Layout";
 import Footer from "@/components/Footer";
-import { GoogleTagManager } from '@next/third-parties/google'
- 
-export default function Page() {
-  return <GoogleTagManager gtmId="GTM-M2TK8GLR" />
-}
 
 const ProductSlider = dynamic(() => import("@/components/ProductSlider"));
 const ProductShowcaseSlider = dynamic(
