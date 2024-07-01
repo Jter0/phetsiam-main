@@ -19,3 +19,35 @@ export default function App({ Component, pageProps }: AppProps) {
     </ThemeProvider>
   );
 }
+
+import { GoogleTagManager } from '@next/third-parties/google';
+
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      // This event will trigger the pageview in Google Analytics
+      window.gtag('config', 'G-SRKH6CF9NK', {
+        page_path: url,
+      });
+    };
+
+    // When the component is mounted, subscribe to router changes
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
+  return (
+    <>
+      <GoogleTagManager gtmId="GTM-M2TK8GLR" />
+      <Component {...pageProps} />
+    </>
+  );
+}
+
+export default MyApp;

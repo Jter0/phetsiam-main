@@ -15,6 +15,7 @@ export default function RootLayout({
   )
 }
 
+
 const Layout = ({ children }: PropsWithChildren) => {
   const router = useRouter();
 
