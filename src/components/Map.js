@@ -55,6 +55,7 @@ const Map = ({ className = "", googleMapClassName = "" }) => {
                 style={{ border: 0 }}
                 allowfullscreen=""
                 loading="lazy"
+                title="Phetsiam PE Pipe Location"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <p className="text-base text-primary mt-3 w-[70%] text-center">
@@ -79,6 +80,7 @@ const Map = ({ className = "", googleMapClassName = "" }) => {
                 style={{ border: 0 }}
                 allowfullscreen=""
                 loading="lazy"
+                title="Phetsiam PE Pipe Location"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <p className="text-base text-primary mt-3 text-center">
