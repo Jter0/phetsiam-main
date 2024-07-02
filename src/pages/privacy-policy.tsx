@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
     <Layout>
       <>
         <Seo title={t("title")} description={t("description")} />
-        <div id="scroll-container">
+        <div className="!scroll-smooth">
           <main className={`leading-none overflow-x-hidden scroll-smooth`}>
             <Navbar bgHeader="!bg-primary" />
             <section className="bg-white mt-16 min-h-screen">

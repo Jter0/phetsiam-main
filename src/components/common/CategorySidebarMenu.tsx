@@ -32,9 +32,6 @@ const CategorySidebarMenu = ({}) => {
             >
               {category.name}
             </Link>
-            <div className="text-gray-500 font-light text-sm  ">
-              {category.count}
-            </div>
           </div>
         ))}
       </div>

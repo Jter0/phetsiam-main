@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import SwiperCore from "swiper/core";
@@ -68,8 +67,10 @@ export default function SponsersSlider() {
               <Image
                 src={url}
                 alt={`Sponsor ${index}`}
-                layout="fill"
-                objectFit="contain"
+                fill
+                sizes="(max-width: 1400px) 20vw, (max-width: 1000px) 20vw, (max-width: 770px) 25vw, (max-width: 550px) 33vw, (max-width: 300px) 50vw, 100vw"
+                style={{ objectFit: "contain" }}
+                loading="lazy"
               />
             </div>
           </SwiperSlide>

@@ -1,5 +1,5 @@
 {
-  "locales": ["en", "id", "kh", "ms", "th", "vi", "cn"],
+  "locales": ["en", "id", "kh", "ms", "th", "vi"],
   "defaultLocale": "en",
   "pages": {
     "*": [
@@ -7,7 +7,9 @@
       "productsSection",
       "newProductsShowcase",
       "industriesSlider",
-      "projectsSlider"
+      "projectsSlider",
+      "products",
+      "sub-products"
     ],
     "/privacy-policy": ["privacy-policy"],
     "/quality": ["quality"],

@@ -2,7 +2,14 @@
 import clsx from "clsx";
 import React, { useState } from "react";
 
-const CustomInput = ({ labelText, inputType, tagType, value, onChange }) => {
+const CustomInput = ({
+  labelText,
+  inputType,
+  tagType,
+  value,
+  onChange,
+  required = true,
+}) => {
   const [isFocused, setIsFocused] = useState(false);
 
   const handleFocus = () => {
@@ -39,7 +46,7 @@ const CustomInput = ({ labelText, inputType, tagType, value, onChange }) => {
             onChange={onChange}
             className="input bg-white text-[#112a3f] w-full z-10"
             type={inputType}
-            required
+            required={required}
             value={value}
           />
         </>
@@ -63,6 +70,8 @@ const CustomInput = ({ labelText, inputType, tagType, value, onChange }) => {
             rows={10}
             cols={12}
             name="Phetsiam form submission"
+            required={required}
+            minLength={30}
           />
         </>
       ) : null}

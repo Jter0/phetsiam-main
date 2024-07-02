@@ -13,23 +13,23 @@ type ProjectCardType = {
 
 type CategoryType = {
   id: string;
+  productsGroupId: string;
   name: string;
-  slug: string;
-  count: number;
-  description: string;
+  description: string[];
 };
 
 type ProductType = {
   permalink: string;
   id: string;
   name: string;
+  slug?: string;
   description: string;
   subDescription: string;
   categoryId: string;
   images: [ProductImageType];
   properties: string[];
   standards: string[];
-  standardsIcons: JSX.Element[];
+  standardsIcons: string[];
   questions: {
     question: string;
     answer: string;
@@ -48,7 +48,6 @@ type ProductType = {
 
 type ProductsGroupType = {
   id: string;
-  categories: CategoryType[];
   title: string;
   img: string;
   color: string;

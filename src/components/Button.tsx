@@ -1,12 +1,12 @@
 import RightArrowIcon from "@/icon/RightArrowIcon";
-import React from "react";
+import { ReactNode } from "react";
 
 export default function Button({
   children,
   className = "",
   name,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: any;
   name?: string;
 }) {

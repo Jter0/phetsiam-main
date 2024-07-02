@@ -102,7 +102,7 @@ function ProductItem({ hit, components }: ProductItemProps) {
     <div className="aa-ItemWrapper hover:bg-gray-200 !z-[1500] ">
       <div className="aa-ItemContent">
         <div className="aa-ItemIcon aa-ItemIcon--picture aa-ItemIcon--alignTop">
-          <Image src={hit.image} alt={hit.name} width="40" height="40" />
+          <Image src={hit.image} alt={hit.name} width="40" height="40" loading="lazy" />
         </div>
 
         <div className="aa-ItemContentBody">

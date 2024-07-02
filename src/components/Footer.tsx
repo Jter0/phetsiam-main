@@ -1,4 +1,4 @@
-import React, { ForwardedRef } from "react";
+import { ForwardedRef, forwardRef } from "react";
 import {
   facebookSvg,
   lineSvg,
@@ -15,8 +15,8 @@ import Link from "next/link";
 import clsx from "clsx";
 import useTranslation from "next-translate/useTranslation";
 import SponsersSlider from "./SponsersSlider";
-// const Footer = () => {
-const Footer = React.forwardRef(
+
+const Footer = forwardRef(
   (
     {
       customStyle,
@@ -160,7 +160,7 @@ const Footer = React.forwardRef(
               </div>
             </div>
 
-            <div className="max-sm:hidden w-fit flex gap-5 mx-auto flex-col !pr-[27px] sc-1100:pr-0 sc-1100:order-3 max-sm:ml-0">
+            <div className="max-sm:hidden w-fit flex gap-5 mx-auto flex-col !pr-[23px] sc-1100:pr-0 sc-1100:order-3 max-sm:ml-0">
               <HeadingAndDetails
                 heading={t("common:sitemap")}
                 name={SITE_MAP}

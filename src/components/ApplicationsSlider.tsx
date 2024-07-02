@@ -83,6 +83,7 @@ const Card = ({ card }: { card: ProjectCardType }) => {
         width={500}
         height={500}
         className="h-full transition-all w-full opacity-100 delay[20ms] object-cover duration-500 ease-in-out group-hover:scale-110 object-center"
+        loading="lazy"
       />
       <div className="absolute bottom-9 text-white flex flex-col transition-all duration-300 ease-in-out mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end pl-7 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">

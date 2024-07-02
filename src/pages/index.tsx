@@ -21,7 +21,7 @@ export default function Home() {
     <Layout>
       <>
         <Seo title={t("pageTitle")} description={t("pageDescription")} />
-        <div id="scroll-container" className="!scroll-smooth">
+        <div className="!scroll-smooth">
           <main
             className={`leading-none overflow-x-hidden scroll-content scroll-smooth`}
           >
@@ -46,7 +46,7 @@ export default function Home() {
                         className="2xl:w-[740px] shadow-[0_4px_24px_0px_rgba(0,0,0,0.25)] xl:w-[600px] w-[570px]"
                         width={700}
                         height={400}
-                        priority
+                        loading="lazy"
                       />
                     </div>
                   </div>

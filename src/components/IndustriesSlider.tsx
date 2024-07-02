@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "@/components/Button";
-import { EffectFade } from "swiper/modules";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
 import SliderRightArrowIcon from "@/icon/SliderRightArrowIcon";
 import { motion } from "framer-motion";
@@ -14,56 +12,49 @@ const industries = [
     name: "Transportation",
     description:
       "It is a long established fact that a reader will be distracted by the readable content...",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/1K1K9Q0rB9JzHLRlkVG1Wk/de2a12f0c4fdda871efca2712769b1b6/Transportation.mp4",
+    imageURL: "/videos/Industry slider/Energy.mp4",
     link: "/",
   },
   {
     name: "Waste",
     description:
       "Geosynthetics are essential for creating safe barriers for containment and protection in waste management.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/7xub6lK5vUyh9PglAbpiFZ/7bf6ed791d6d9d611fa60758ab0e8ee0/Waste_1.mp4",
+    imageURL: "/videos/Industry slider/Farming.mp4",
     link: "/",
   },
   {
     name: "Water",
     description:
       "Our engineered solutions safeguard water resources, shorelines and waterways against disasters, water loss and contamination.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/4li72RtVwXdULy7hcDKs00/08e660cd48a84146c47826597dc33601/Water.mp4",
+    imageURL: "/videos/Industry slider/Industry.mp4",
     link: "/",
   },
   {
     name: "Mining",
     description:
       "Our geosynthetic solutions for mining boost efficiency, safely recover materials, and support infrastructure.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/3j01K8hDXIXNgaIR5B2OT0/70522097d76086a21136094aaa77a870/Mining.mp4",
+    imageURL: "/videos/Industry slider/Infrastructure.mp4",
     link: "/",
   },
   {
     name: "Energy",
     description:
       "Geosynthetics provide valuable solutions in construction and operation of natural energy resources and energy facilities.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/65Ts2IRyCBOxD6bmVVEv9u/97cfdbb084bdb6920ff71c35d9ec9a4e/Energy.mp4",
+    imageURL: "/videos/Industry slider/Megastructures.mp4",
     link: "/",
   },
   {
     name: "Agriculture",
     description:
       "Geosynthetics enhance agricultural efficiency, protect crops, manage water, control erosion, and optimize growing conditions.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/4dFGoB0G7KGrmy8xUU1nq7/b18c027febaf7f20df8ccabb34094f87/Agriculture.mp4",
+    imageURL: "/videos/Industry slider/Mining.mp4",
     link: "/",
   },
   {
     name: "Site development",
     description:
       "Geosynthetics have become an essential component in efficient, cost effective and sustainable construction.",
-    imageURL:
-      "//videos.ctfassets.net/u2flb46xxe2f/760cTttkCN6DobON372jej/6acef4af8ccc72ef0aa81bc3dd6c214c/Site_Development_1.mp4",
+    imageURL: "/videos/Industry slider/Transport.mp4",
     link: "/",
   },
 ];

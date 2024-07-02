@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer";
 import {
   CategoryType,
@@ -15,22 +15,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SliderRightArrowIcon from "@/icon/SliderRightArrowIcon";
 import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
 import RightArrowIcon from "@/icon/RightArrowIcon";
-import { products, productsGroups } from "@/mock/products";
+import { categories, products, productsGroups, slugs } from "@/mock/products";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
-import ClientSideOnly from "@/components/ClientSideOnly";
 
 // Dynamic imports
-const Navbar = dynamic(() => import("@/components/Navbar"));
-const Layout = dynamic(() => import("@/components/Layout"));
+const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
+const Layout = dynamic(() => import("@/components/Layout"), { ssr: false });
 
 const Products = () => {
+  const loaded = useRef(false);
+
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      loaded.current = true;
+    });
+
+    return () =>
+      document.removeEventListener("DOMContentLoaded", () => {
+        loaded.current = true;
+      });
+  }, []);
+
   return (
     <Layout>
-      <ClientSideOnly>
-        <div className="scroll-smooth">
-          <main className="leading-none overflow-x-hidden scroll-smooth relative">
-            <Navbar bgHeader="!bg-primary" />
+      <main className="leading-none overflow-x-hidden !scroll-smooth relative">
+        <Navbar bgHeader="!bg-primary" />
+        {loaded && (
+          <>
             {productsGroups.map((productsGroup, index) => (
               <ProductsGroup
                 key={productsGroup.title + index}
@@ -38,10 +49,10 @@ const Products = () => {
                 index={index}
               />
             ))}
-            <Footer customStyle="!static" />
-          </main>
-        </div>
-      </ClientSideOnly>
+          </>
+        )}
+        <Footer customStyle="!static" />
+      </main>
     </Layout>
   );
 };
@@ -61,27 +72,15 @@ const ProductsGroup = ({
 
   const { t } = useTranslation();
 
-  const router = useRouter();
-
   return (
     <div>
       <div
         className={clsx(
-          "text-white pt-7 pb-11 sm:pb-[72px] text-center flex items-end h-[374px] relative",
+          "text-white pt-7 pb-11 sm:pb-[72px] text-center flex items-end h-[374px] relative products-bg-img",
           true && "!pb-8"
         )}
+        style={{ backgroundImage: `url(${productsGroup.img})` }}
       >
-        {router.isReady && (
-          <div className="absolute top-0 left-0 h-full w-full">
-            <Image
-              src={productsGroup.img}
-              alt="Products Background"
-              layout="fill"
-              objectFit="cover"
-              priority={true}
-            />
-          </div>
-        )}
         {index < 1 && (
           <div className="absolute w-full max-w-primary top-24 left-1/2 px-5 sm:px-20 -translate-x-1/2 z-10 text-white font-light sm:text-xl flex items-center gap-2">
             <Link
@@ -125,14 +124,18 @@ const ProductsGroup = ({
                   showContent && "opacity-0"
                 )}
               >
-                {productsGroup.categories.map((category, index) => (
-                  <p
-                    key={category.name + index}
-                    className="text-start md:text-3xl xl:text-4xl text-xl font-light"
-                  >
-                    {t(`products:${category.name}`)}
-                  </p>
-                ))}
+                {categories
+                  .filter(
+                    (category) => category.productsGroupId === productsGroup.id
+                  )
+                  .map((category, index) => (
+                    <p
+                      key={category.name + index}
+                      className="text-start md:text-3xl xl:text-4xl text-xl font-light"
+                    >
+                      {t(`products:${category.name}`)}
+                    </p>
+                  ))}
               </div>
             </div>
           </div>
@@ -147,14 +150,18 @@ const ProductsGroup = ({
       >
         {showContent && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-36 max-w-primary py-3 sm:px-20 px-5 mx-auto">
-            {productsGroup.categories.map((category, index) => (
-              <MemoizedCategoryGroup
-                key={category.name + index}
-                category={category}
-                index={index}
-                productsGroup={productsGroup}
-              />
-            ))}
+            {categories
+              .filter(
+                (category) => category.productsGroupId === productsGroup.id
+              )
+              .map((category, index) => (
+                <MemoizedCategoryGroup
+                  key={category.name + index}
+                  category={category}
+                  index={index}
+                  productsGroup={productsGroup}
+                />
+              ))}
           </div>
         )}
       </div>
@@ -164,28 +171,18 @@ const ProductsGroup = ({
 
 export default Products;
 
-const ProductCard = ({
-  product,
-  productsGroup,
-}: {
-  product: ProductType;
-  productsGroup: ProductsGroupType;
-}) => {
+const ProductCard = ({ product }: { product: ProductType }) => {
   const { t } = useTranslation("products");
 
   const [animate] = useAutoAnimate();
 
   const [showDetails, setShowDetails] = useState(false);
 
+  const slug = slugs.find((slug) => slug.productId === product.id);
+
   return (
     <Link
-      href={{
-        pathname: "/sub-products",
-        query: {
-          productId: product.id,
-          productsGroupId: productsGroup.id,
-        },
-      }}
+      href={`sub-products/${slug?.text}`}
       className="mt-5 project-card w-full block cursor-pointer relative md:max-w-max max-w-full h-[305px] shadow-[0px_3px_39px_0px_#0000001A] hover:sm:shadow-[0px_4px_24px_0px_#00000040] transition-shadow overflow-hidden group"
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
@@ -195,7 +192,9 @@ const ProductCard = ({
         alt="pb fitting image"
         width={200}
         height={200}
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
+        loading="lazy"
       />
       <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end px-5 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">
@@ -212,7 +211,7 @@ const ProductCard = ({
             aria-label="discover more"
             className={`flex leading-5 items-center gap-3 sm:group hover:sm:text-secondary group-hover:sm:text-secondary sm:transition-all sm:duration-300 sm:ease-in-out text-lg`}
           >
-            <span>{t("discover_more")}</span>
+            <span className="text-left">{t("discover_more")}</span>
             <RightArrowIcon
               className={`group-hover:sm:translate-x-1.5 group-hover:sm:text-secondary sm:duration-300`}
             />
@@ -284,36 +283,25 @@ const CategoryGroup = ({
                 !showMore && "max-sc-1100:truncate"
               )}
             >
-              {t(category.description)}
+              {t(category.description[0])}
             </span>
             <ArrowSvg active={showMore} className="shrink-0" />
           </button>
           {showMore && (
             <>
-              <p
-                className={clsx(
-                  "py-2 px-4 sm:transition-colors sm:duration-300 sm:ease-in-out text-[#545454] text-sm text-left font-medium",
-                  showMore ? "bg-gray-200" : "bg-white"
-                )}
-              >
-                {t("hdpePipes")}
-              </p>
-              <p
-                className={clsx(
-                  "py-2 px-4 sm:transition-colors sm:duration-300 sm:ease-in-out text-[#545454] text-sm text-left font-medium",
-                  showMore ? "bg-gray-200" : "bg-white"
-                )}
-              >
-                {t("mechanicalJointingSystem")}
-              </p>
-              <p
-                className={clsx(
-                  "py-2 px-4 sm:transition-colors sm:duration-300 sm:ease-in-out text-[#545454] text-sm text-left font-medium",
-                  showMore ? "bg-gray-200" : "bg-white"
-                )}
-              >
-                {t("hdpePipesProperties")}
-              </p>
+              {category.description.map(
+                (description, index) =>
+                  index > 0 && (
+                    <p
+                      className={clsx(
+                        "py-2 px-4 sm:transition-colors sm:duration-300 sm:ease-in-out text-[#545454] text-sm text-left font-medium",
+                        showMore ? "bg-gray-200" : "bg-white"
+                      )}
+                    >
+                      {t(description)}
+                    </p>
+                  )
+              )}
             </>
           )}
         </div>
@@ -322,8 +310,7 @@ const CategoryGroup = ({
           <SliderLeftArrowIcon
             className={clsx(
               `product${index}-slider-prev-btn text-primary absolute sm:-left-16 sm:top-1/2 -top-4 -translate-y-1/2 sm:right-20 right-14 hover:sm:-translate-x-3 sm:transition-all sm:duration-300 projects-slider-prev-btn z-10 sm:w-[58px] sm:h-[35px] w-[48px]`,
-              index + 1 < 2 && "max-sc-500:!hidden",
-              index + 1 < 3 && "sc-500:!hidden"
+              categoryProducts.length < 2 && "max-sc-768:!hidden"
             )}
           />
 
@@ -343,6 +330,11 @@ const CategoryGroup = ({
                 spaceBetween: "10px",
               },
 
+              768: {
+                slidesPerView: 1,
+                spaceBetween: "20px",
+              },
+
               500: {
                 slidesPerView: 2,
                 spaceBetween: "20px",
@@ -359,15 +351,16 @@ const CategoryGroup = ({
                 key={product.name + index}
                 className={clsx(
                   categoryProducts.length === 1 &&
-                    "!w-full max-md:!min-w-[256px] max-md:!max-w-[256px]"
+                    "!w-full max:!min-w-[256px] max-md:!max-w-[256px]",
+                  categoryProducts.length >= 2 &&
+                    "!flex !items-center !justify-center"
                 )}
                 tag="li"
-                style={{ listStyle: "none" }}
+                style={{
+                  listStyle: "none",
+                }}
               >
-                <MemoizedProductCard
-                  product={product}
-                  productsGroup={productsGroup}
-                />
+                <MemoizedProductCard product={product} />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -375,8 +368,7 @@ const CategoryGroup = ({
           <SliderRightArrowIcon
             className={clsx(
               `product${index}-slider-next-btn text-primary absolute sm:-right-16 sm:top-1/2 -top-4 right-0 -translate-y-1/2 sm:transition-all sm:duration-300 sm:ease-in-out projects-slider-next-btn sm:w-[58px] sm:h-[35px] hover:sm:translate-x-3 w-[48px]`,
-              index + 1 < 2 && "max-sc-500:!hidden",
-              index + 1 < 3 && "sc-500:!hidden"
+              categoryProducts.length < 2 && "max-sc-768:!hidden"
             )}
           />
         </div>

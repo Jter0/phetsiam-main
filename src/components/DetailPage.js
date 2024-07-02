@@ -8,7 +8,7 @@ const DetailPage = ({ item, back }) => {
     <div className="flex flex-col lg:flex-row gap-[2rem]">
       <div className="flex-[1]">
         <div className="flex items-center justify-center bg-grey1 py-2 w-full rounded-2xl">
-          <Image alt={heading} src={image} width={100} height={100}></Image>
+          <Image alt={heading} src={image} width={100} height={100} loading="lazy"></Image>
         </div>
       </div>
       <div className="flex-[1]">

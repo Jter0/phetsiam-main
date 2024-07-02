@@ -77,7 +77,7 @@ const Resources = () => {
     <Layout>
       <>
         <Seo title={t("title")} description={t("description")} />
-        <div id="scroll-container" ref={rootRef}>
+        <div className="!scroll-smooth" ref={rootRef}>
           <main className={`leading-none overflow-x-hidden scroll-smooth`}>
             <Navbar bgHeader="!bg-primary" scroll={scroll} />
             <section className="bg-white mt-16 min-h-screen">

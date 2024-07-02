@@ -72,7 +72,7 @@ const Quality = () => {
 
   return (
     <Layout>
-      <div id="scroll-container" ref={rootRef}>
+      <div className="!scroll-smooth" ref={rootRef}>
         <main
           className={clsx(
             "leading-none overflow-x-hidden scroll-smooth",
@@ -82,7 +82,9 @@ const Quality = () => {
           <Navbar bgHeader="!bg-primary" />
           <div className={clsx("bg-white mt-14 sm:mt-16")}>
             <div className="container-size pt-[3rem] pb-[6rem] relative">
-              <div className="flex flex-col gap-4">
+              <div
+                className={clsx("flex flex-col gap-4", showElement && "hidden")}
+              >
                 <h1 className="text-primary font-semibold text-[2rem] border-b border-gray-300">
                   {t("qualityAssurance")}
                 </h1>
@@ -91,7 +93,7 @@ const Quality = () => {
                 </p>
               </div>
               {/* More text with translations */}
-              <div className="mt-14">
+              <div className={clsx("mt-14", showElement && "hidden")}>
                 {selectedItem ? (
                   <DetailPage item={selectedItem} back={handleBack} />
                 ) : (
@@ -119,6 +121,7 @@ const Quality = () => {
                               className="max-h-[90%] p-4"
                               width={200}
                               height={100}
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -146,7 +149,7 @@ const Quality = () => {
             </div>
           </div>
         </main>
-        <Footer customStyle="!static" />
+        <Footer customStyle={clsx("!static", showElement && "hidden")} />
       </div>
     </Layout>
   );
@@ -173,14 +176,14 @@ const Element = ({
   return (
     <div
       className={clsx(
-        "absolute top-0 left-0 pt-8 md:pt-16 pb-[6rem] w-full h-full bg-white z-10 transition-all duration-500",
+        "fixed top-0 left-0 pt-8 md:pt-16 w-full h-full max-h-fit overflow-y-scroll bg-white z-10 transition-all duration-500",
         show ? "translate-y-0" : "-translate-y-full"
       )}
       ref={animate}
     >
       <div
         className={clsx(
-          "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-h-[620px] max-md:justify-items-center"
+          "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-md:justify-items-center container-size pt-[3rem] pb-[6rem]"
         )}
       >
         <div className="cursor-pointer relative group-hover:shadow-none transition-all duration-500 shadow-lg bg-[#D9D9D9] rounded-[30px] flex items-center justify-center py-2 md:py-10 max-md:w-[300px] max-md:h-[300px] aspect-square">
@@ -189,6 +192,7 @@ const Element = ({
             alt={t(selectedElement.heading.split(" ").join(""))}
             fill
             className="p-20"
+            loading="lazy"
           />
         </div>
         <div className="flex flex-col md:pt-6 justify-between">

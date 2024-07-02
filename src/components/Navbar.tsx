@@ -6,7 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import CrossIcon from "@/icon/CrossIcon";
 import { useRouter } from "next/router";
 import HeaderSearch from "./HeaderSearch";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import SearchPopup from "./SearchPopup";
 import clsx from "clsx";
 import useClickAway from "@/lib/hooks/useClickAway";
@@ -19,7 +19,7 @@ const searchClient = algoliasearch(
   "aff156b888f8ebf2f31f02b289736078"
 );
 
-const options = ["EN", "TH", "ID", "MS", "VI", "KH", "CN"];
+const options = ["EN", "TH", "ID", "MS", "VI", "KH"];
 
 const item = {
   hidden: { y: -30, opacity: 0 },
@@ -72,7 +72,11 @@ const NavbarInner = ({
   }, [router.locale]);
 
   useEffect(() => {
-    if (windowWidth > 1099) setIsTrue(true);
+    if (windowWidth > 1099) {
+      setIsTrue(true);
+    } else {
+      setLang(false);
+    }
   }, [windowWidth]);
   useEffect(() => {
     const handleResize = () => {
@@ -222,7 +226,7 @@ const NavbarInner = ({
                 {links.map((link, index) => (
                   <div key={link.title + index}>
                     <Fade
-                      right
+                      direction="right"
                       duration={
                         index === 0
                           ? 300
@@ -236,7 +240,6 @@ const NavbarInner = ({
                           ? 1100
                           : 1300
                       }
-                      when={windowWidth > 1099 ? isTrue : !isTrue}
                     >
                       <motion.div
                         key={index}
@@ -278,7 +281,7 @@ const NavbarInner = ({
                 {options.map((link, index) => (
                   <Fade
                     key={link + index}
-                    right
+                    direction="right"
                     duration={
                       index === 0
                         ? 300
@@ -292,7 +295,6 @@ const NavbarInner = ({
                         ? 1100
                         : 1300
                     }
-                    when={windowWidth > 1099 ? isTrue : !isTrue}
                   >
                     <motion.span
                       key={link + index}
@@ -531,7 +533,7 @@ const NavbarInner = ({
                   {options.map((link, index) => (
                     <div key={link + index}>
                       <Fade
-                        right
+                        direction="right"
                         duration={
                           index === 0
                             ? 300
@@ -545,7 +547,6 @@ const NavbarInner = ({
                             ? 1100
                             : 1300
                         }
-                        when={lang ? isTrue : !isTrue}
                       >
                         <motion.div
                           key={index}

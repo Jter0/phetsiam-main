@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import clsx from "clsx";
 import styles from "../styles/about.module.css";
-import { Fade, Zoom } from "react-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -17,7 +17,7 @@ import img5 from "../assets/about/about-img-5.webp";
 import img6 from "../assets/about/about-img-6.webp";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
-import { useRouter } from "next/router";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,10 +26,21 @@ const Navbar = dynamic(() => import("../components/Navbar"));
 function About() {
   const { t } = useTranslation("about");
 
-  const router = useRouter();
+  const loaded = useRef(false);
 
-  useGSAP(() => {
-    if (router.isReady) {
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      loaded.current = true;
+    });
+
+    return () =>
+      document.removeEventListener("DOMContentLoaded", () => {
+        loaded.current = true;
+      });
+  }, []);
+
+  if (loaded) {
+    useGSAP(() => {
       gsap.set(`.${styles.bg}`, {
         zIndex: (i, _, targets) => targets.length - i,
       });
@@ -89,8 +100,8 @@ function About() {
           // markers: true,
         });
       });
-    }
-  }, []);
+    }, []);
+  }
 
   const slides = [
     [
@@ -206,7 +217,7 @@ function About() {
             priority
           />
         </Zoom>
-        <Fade bottom duration={1500}>
+        <Fade direction="up" duration={1500}>
           <div className="text-white text-md text-center md:w-[15rem]">
             {t("trustedProvider")}
           </div>
@@ -252,36 +263,40 @@ function About() {
         description="We don't just deliver pipes; we deliver VIRTUE in every aspect of our service."
       />
       <Navbar />
-      <div id={styles.container}>
-        <div className={styles["bg-wrap"]}>
-          {[img1, img2, img3, img4, img5, img6].map((image, index) => (
-            <div
-              className={clsx(styles.bg, `bg-${index}`)}
-              style={{
-                zIndex: index === 0 ? 90 : "auto",
-              }}
-            >
-              <Image
-                src={image}
-                alt="background"
-                placeholder="blur"
-                fill
-                objectFit="cover"
-                objectPosition="center"
-                priority
-              />
-            </div>
-          ))}
+      {loaded && (
+        <div id={styles.container} className="!scroll-smooth">
+          <div className={styles["bg-wrap"]}>
+            {[img1, img2, img3, img4, img5, img6].map((image, index) => (
+              <div
+                className={clsx(styles.bg, `bg-${index}`)}
+                style={{
+                  zIndex: index === 0 ? 90 : "auto",
+                }}
+                key={index}
+              >
+                <Image
+                  src={image}
+                  alt="background"
+                  placeholder="blur"
+                  fill
+                  objectFit="cover"
+                  objectPosition="center"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  priority
+                />
+              </div>
+            ))}
+          </div>
+          <div>
+            {slides.map((slide, index) => (
+              <section className="container-size relative h-screen" key={index}>
+                {slide}
+              </section>
+            ))}
+          </div>
         </div>
-        <div>
-          {slides.map((slide, index) => (
-            <section className="container-size relative h-screen" key={index}>
-              {slide}
-            </section>
-          ))}
-        </div>
-      </div>
-      <Footer customStyle="relative" />
+      )}
+      <Footer customStyle="relative z-50" />
     </Layout>
   );
 }

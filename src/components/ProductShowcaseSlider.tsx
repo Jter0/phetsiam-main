@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PlayBtnIcon from "@/icon/PlayBtnIcon";
 import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
@@ -7,6 +6,7 @@ import Button from "@/components/Button";
 import Link from "next/link";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
+import { useState } from "react";
 
 const products: any = [
   {
@@ -60,8 +60,8 @@ const products: any = [
 ];
 
 function ProductShowcaseSlider() {
-  const [imageSwiper, setImageSwiper] = React.useState<any>(null);
-  const [textSwiper, setTextSwiper] = React.useState<any>(null);
+  const [imageSwiper, setImageSwiper] = useState<any>(null);
+  const [textSwiper, setTextSwiper] = useState<any>(null);
 
   const handleSlideChange = () => {
     if (imageSwiper && textSwiper) {
@@ -98,7 +98,7 @@ function ProductShowcaseSlider() {
   return (
     <>
       <div className="">
-        <React.Fragment>
+        <>
           <div className="swiper-container">
             <Swiper
               id="product-showcase"
@@ -145,11 +145,12 @@ function ProductShowcaseSlider() {
                   >
                     <div className="relative product-showcase-slide">
                       <Image
-                        className="object-cover h-full w-full"
+                        className="absolute top-0 left-0 object-cover"
                         src={product.image}
                         alt={product.title}
                         fill
-                        priority
+                        sizes="(max-width: 900px) 100vw, (max-width: 1080px) 50vw, 33vw"
+                        loading="lazy"
                       />
                       <div className="product-showcase-slide-overlay absolute top-0 left-0 w-full h-full"></div>
                       <PlayBtnIcon className="play-btn text-[#EDF1FE] hover:text-primary transition-all duration-300 ease-in-out absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 " />
@@ -159,7 +160,7 @@ function ProductShowcaseSlider() {
               })}
             </Swiper>
           </div>
-        </React.Fragment>
+        </>
       </div>
 
       <div className="max-w-primary mx-auto sm:px-8 px-5 mt-10  ">

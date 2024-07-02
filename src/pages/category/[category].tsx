@@ -117,6 +117,7 @@ const ProductByCategoryPage = ({}) => {
             layout="fill"
             objectFit="contain"
             alt={product.name}
+            loading="lazy"
           />
         </div>
       </div>
@@ -125,7 +126,7 @@ const ProductByCategoryPage = ({}) => {
 
   return (
     <Layout>
-      <div id="scroll-container" ref={rootRef}>
+      <div className="!scroll-smooth" ref={rootRef}>
         <DefaultLoading loading={loading} />
         <main
           className={`leading-none overflow-x-hidden scroll-smooth`}

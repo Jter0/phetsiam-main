@@ -24,6 +24,7 @@ const Sidebar = () => {
             alt="pb-fitting-img"
             width={100}
             height={100}
+            loading="lazy"
           ></Image>
           <Button
             name="discover more"

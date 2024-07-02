@@ -40,5 +40,19 @@
   "Industry": "Industry",
   "Megastructures": "Megastructures",
   "Transport": "Transport",
-  "sub-description": "High-density polyethylene (HDPE) pipes. More than 50 years working life. Industry standard pipes for all water applications. TIS.982-2556 & ISO 4427 standard compliant. PS Pipe’s HDPE pipes are made from 100% virgin material from SCG HDPE pellets. Fabricated PE fittings under the PS brand allow for high operating pressures at large pipe diameters."
+  "sub-description": "High-density polyethylene (HDPE) pipes. More than 50 years working life. Industry standard pipes for all water applications. TIS.982-2556 & ISO 4427 standard compliant. PS Pipe’s HDPE pipes are made from 100% virgin material from SCG HDPE pellets. Fabricated PE fittings under the PS brand allow for high operating pressures at large pipe diameters.",
+  "Barrier": "Barrier",
+  "Chem Resistant": "Chem Resistant",
+  "Containment": "Containment",
+  "Drainage": "Drainage",
+  "Erosion Prot": "Erosion Protection",
+  "Filtration": "Filtration",
+  "Flexible": "Flexible",
+  "Food Grade": "Food Grade",
+  "High Temp": "High Temperature",
+  "Impact Resistant": "Impact Resistant",
+  "Imperm Barrier": "Impermeable Barrier",
+  "Lightweight": "Lightweight",
+  "Particle Confinement": "Particle Confinement",
+  "Pressure Resistance": "Pressure Resistance"
 }

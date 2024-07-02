@@ -17,23 +17,6 @@
 body::-webkit-scrollbar-thumb {
   display: none !important;
 }
-
-.product-overlay {
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
-}
-
-.product-card {
-  box-shadow: 0px 3px 39px 0px rgba(0, 0, 0, 0.1),
-    0px 4px 24px 0px rgba(0, 0, 0, 0.25);
-  transition-property: all !important;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition-duration: 0.15s !important;
-}
-
 #sponsers-slider .swiper-container {
   width: 100%;
   height: auto;
@@ -82,35 +65,6 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-}
-
-.showcase-overlay-active {
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
-}
-
-.our-project-card-overlay {
-  background-image: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  scroll-behavior: smooth;
-}
-
-.main > div {
-  width: 100vw;
-  height: 100vh;
-  background-color: orange;
 }
 
 .products-slider {
@@ -202,60 +156,10 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.Dropdown-root .Dropdown-control {
-  background-color: transparent;
-  border: none;
-  padding-block: 14px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  padding-inline: 20px;
-  padding-right: 0;
-  cursor: pointer;
-  color: #fff;
-}
-
-.Dropdown-root:hover .Dropdown-control {
-  color: #0fa490;
-}
-
-.Dropdown-root:hover ~ svg {
-  color: #0fa490;
-}
-
-.Dropdown-arrow-wrapper {
-  display: none;
-}
-
-.Dropdown-root ~ svg {
-  color: #fff;
-}
-
-.Dropdown-root.is-open .Dropdown-placeholder {
-  color: #0fa490;
-}
-
-.Dropdown-root.is-open ~ svg {
-  color: #0fa490;
-}
-
-.Dropdown-placeholder {
-  font-size: 20px;
-  font-weight: normal;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  color: inherit;
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .swiper-slide-active .play-btn {
   color: #0f4c81;
 }
 
-.Dropdown-menu {
-  left: 10px;
-}
 aa-ItemIcon {
   background: none !important;
 }
@@ -264,24 +168,6 @@ aa-ItemIcon--picture {
 }
 aa-ItemIcon--alignTop {
   background: none !important;
-}
-
-@media (max-width: 1550px) {
-  .container-secondary {
-    --space-on-one-side: calc((100vw - 90%) / 2);
-  }
-}
-
-@media (max-width: 1100px) {
-  .Dropdown-root .Dropdown-control {
-    padding-block: 10px;
-    padding-left: 10px;
-  }
-
-  .Dropdown-placeholder {
-    font-size: 18px;
-    width: 45px;
-  }
 }
 
 @media (max-width: 1080px) {
@@ -332,52 +218,8 @@ aa-ItemIcon--alignTop {
   }
 }
 
-@media (max-width: 600px) {
-  .Dropdown-placeholder {
-    font-size: 16px;
-    width: 40px;
-  }
-}
-
-.input {
-  @apply outline-none;
-}
-
-.formInput {
-  padding: 0 !important;
-}
-
-.aa-SubmitIcon,
-.aa-InputWrapperPrefix {
-  display: none !important;
-  outline: none !important;
-}
-
-.aa-Input {
-  outline: none !important;
-  color: white !important;
-}
-
-.aa-DetachedSearchButton {
-  outline: none !important;
-  background-color: transparent !important;
-}
-
-.aa-Panel {
-  outline: none !important;
-  width: 500px !important;
-  z-index: 999px !important;
-}
-.aa-Source {
-  z-index: 10 !important;
-}
-.background-container {
-  transition: background-image 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
-  background-size: cover;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  /* Add other styling properties as per your design */
+video.hide-media-controls::-webkit-media-controls {
+  display: none;
 }
 
 @keyframes clip-path-anim {
@@ -420,10 +262,6 @@ aa-ItemIcon--alignTop {
   animation: bg-animation-previous 0.6s ease-in forwards;
 }
 
-video.hide-media-controls::-webkit-media-controls {
-  display: none;
-}
-
 @keyframes bg-animation-previous {
   0% {
     opacity: 1;
@@ -443,4 +281,31 @@ video.hide-media-controls::-webkit-media-controls {
   to {
     opacity: 1;
   }
+}
+
+@keyframes a {
+  0%,
+  100% {
+    transform: translateY(-25%) !important;
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1) !important;
+  }
+  50% {
+    transform: none !important;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
 }

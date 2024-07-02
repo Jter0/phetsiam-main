@@ -3,7 +3,6 @@ import { LineIcon } from "./icons/LineIcon";
 import { FacebookIcon } from "./icons/FacebookIcon";
 import MailIcon from "./icons/MailIcon";
 import MobileIcon from "./icons/MobileIcon";
-import { Fade } from "react-reveal";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import clsx from "clsx";

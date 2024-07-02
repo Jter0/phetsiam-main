@@ -22,6 +22,7 @@ const DEFAULT_FIELDS = {
 
 const Contact = () => {
   const rootRef = useRef(null);
+  const recaptcha = useRef<ReCAPTCHA>(null);
 
   const [fields, setFields] = useState(DEFAULT_FIELDS);
 
@@ -34,22 +35,21 @@ const Contact = () => {
 
   const accessKey = "3ebb9634-c87a-4b41-8f74-6f700fc4e2b1";
 
-  console.log(`  name: ${fields.name}
-  surname: ${fields.surname}
-  email: ${fields.email}
-  phone: ${fields.phone}
-`);
-
   const { submit: onSubmit } = useWeb3Forms({
     access_key: accessKey,
     settings: {
       from_name: "Phetsiam form submission",
       Message: fields.message,
-      "Sender information": `name: ${fields.name}
+      "Sender information": fields.phone
+        ? `name: ${fields.name}
         surname: ${fields.surname}
         email: ${fields.email}
         phone: ${fields.phone}
-      `,
+      `
+        : `name: ${fields.name}
+      surname: ${fields.surname}
+      email: ${fields.email}
+    `,
     },
     onSuccess: (msg: any, data) => {
       reset();
@@ -60,15 +60,23 @@ const Contact = () => {
     },
   });
 
-  const { t } = useTranslation("contact");
+  const handleFormSubmit = (data: any) => {
+    const recaptchaValue = recaptcha.current?.getValue();
+    if (!recaptchaValue) {
+      alert("Please verify the reCAPTCHA!");
+      return;
+    }
 
-  const recaptcha = useRef<ReCAPTCHA>(null);
+    onSubmit(data);
+  };
+
+  const { t } = useTranslation("contact");
 
   return (
     <Layout>
       <>
         <Seo title={t("contactTitle")} description={t("contactDescription")} />
-        <div id="scroll-container" ref={rootRef}>
+        <div className="!scroll-smooth" ref={rootRef}>
           <main className={`leading-none overflow-x-hidden scroll-smooth`}>
             <Navbar bgHeader="!bg-primary" />
             <section className="bg-grey1 mt-16 min-h-screen">
@@ -80,14 +88,7 @@ const Contact = () => {
                   <div className="flex-[1]">
                     <form
                       className="bg-white px-12 py-6 min-h-full border border-[#b4c1d1]"
-                      onSubmit={() => {
-                        const captchaValue = recaptcha?.current?.getValue();
-                        if (!captchaValue) {
-                          alert("Please verify the reCAPTCHA!");
-                        } else {
-                          handleSubmit(onSubmit);
-                        }
-                      }}
+                      onSubmit={handleSubmit(handleFormSubmit)}
                     >
                       <div className="flex flex-col md:flex-row gap-[2rem]">
                         <CustomInput
@@ -119,6 +120,7 @@ const Contact = () => {
                           tagType={"input"}
                           value={fields.phone}
                           onChange={handleChange("phone")}
+                          required={false}
                         />
                       </div>
                       <div className="flex flex-col md:flex-row gap-[2rem] mt-[2rem]">

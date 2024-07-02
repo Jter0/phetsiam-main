@@ -1,4 +1,3 @@
-import React from "react";
 import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
 import SliderRightArrowIcon from "@/icon/SliderRightArrowIcon";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -94,7 +93,7 @@ const ProductSlider = () => {
                     width={500}
                     height={500}
                     className="h-full transition-all  w-full opacity-100 delay[20ms] object-cover duration-500 ease-in-out group-hover:scale-110 object-center"
-                    priority
+                    loading="lazy"
                   />
 
                   <div className="absolute bottom-9 text-white flex flex-col transition-all mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end pl-7 pb-10">

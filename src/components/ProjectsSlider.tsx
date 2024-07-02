@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
 import SliderRightArrowIcon from "@/icon/SliderRightArrowIcon";
@@ -41,6 +40,7 @@ const projectCards = [
 
 const ProjectsSlider = () => {
   const { t } = useTranslation("projectsSlider");
+
   return (
     <div className="">
       <h2 className="text-primary sc-1100:max-w-full max-w-max xl:text-5xl text-3xl md:text-4xl font-semibold capitalize text-center">
@@ -91,10 +91,10 @@ const ProjectsSlider = () => {
                   <Image
                     src={card.image}
                     alt={t(card.title)}
-                    width={500}
-                    height={500}
+                    width={300}
+                    height={300}
                     className="h-full transition-all w-full opacity-100 delay[20ms] object-cover duration-500 ease-in-out group-hover:scale-110 object-center"
-                    priority
+                    loading="lazy"
                   />
 
                   <div className="absolute bottom-9 text-white flex flex-col transition-all duration-300 ease-in-out mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end pl-7 pb-10">
