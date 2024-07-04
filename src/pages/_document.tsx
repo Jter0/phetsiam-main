@@ -16,14 +16,17 @@ export default function Document() {
             `,
           }}
         />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SRKH6CF9NK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SRKH6CF9NK');
-</script>
+         <script async src="https://www.googletagmanager.com/gtag/js?id=G-SRKH6CF9NK"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SRKH6CF9NK');
+            `
+          }}
+        />
       </Head>
       <body>
       <noscript
