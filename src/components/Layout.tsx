@@ -5,6 +5,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   const router = useRouter();
 
   useEffect(() => {
+    
     const handleRouteChange = () => {
       window.scrollTo(0, 0);
     };
@@ -17,6 +18,7 @@ const Layout = ({ children }: PropsWithChildren) => {
   }, [router]);
 
   return children;
+  
 };
 
 export default Layout;
