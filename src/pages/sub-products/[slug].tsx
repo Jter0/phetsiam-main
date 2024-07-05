@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Seo from "@/components/Seo";
 
 // Dynamic imports for components
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
@@ -55,8 +56,10 @@ export default function SubProduct() {
         loaded.current = true;
       });
   }, []);
+
   return (
     <Layout>
+      <Seo title={t(product.name)} description={t(product.description)} />
       <div className="!scroll-smooth bg-[#F0F0F0]">
         <main className="leading-none overflow-x-hidden scroll-smooth relative">
           <Navbar bgHeader="!bg-primary" />

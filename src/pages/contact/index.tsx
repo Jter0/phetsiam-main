@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
 import ReCAPTCHA from "react-google-recaptcha";
+import clsx from "clsx";
 
 const DEFAULT_FIELDS = {
   name: "",
@@ -25,6 +26,7 @@ const Contact = () => {
   const recaptcha = useRef<ReCAPTCHA>(null);
 
   const [fields, setFields] = useState(DEFAULT_FIELDS);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange =
     (field: string) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,9 +55,12 @@ const Contact = () => {
     },
     onSuccess: (msg: any, data) => {
       reset();
+      setFields(DEFAULT_FIELDS);
+      setIsSubmitting(false);
       alert(msg);
     },
     onError: (msg: any, data) => {
+      setIsSubmitting(false);
       alert(msg);
     },
   });
@@ -67,6 +72,7 @@ const Contact = () => {
       return;
     }
 
+    setIsSubmitting(true);
     onSubmit(data);
   };
 
@@ -152,7 +158,11 @@ const Contact = () => {
                         <input
                           type="submit"
                           value={t("submitButton")}
-                          className="bg-[#b4c1d1] hover:bg-primary transition-colors duration-300 px-6 py-3 sm:mt-0 mt-4 text-md text-white rounded-md cursor-pointer self-end"
+                          className={clsx(
+                            "bg-[#b4c1d1] hover:bg-primary transition-colors duration-300 px-6 py-3 sm:mt-0 mt-4 text-md text-white rounded-md cursor-pointer self-end",
+                            isSubmitting && "cursor-not-allowed"
+                          )}
+                          disabled={isSubmitting}
                         />
                       </div>
                       <div className="flex items-center justify-center pt-5">

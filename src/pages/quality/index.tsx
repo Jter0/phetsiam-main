@@ -7,6 +7,7 @@ import ViewMoreRight from "@/icon/ViewMoreRight";
 import useTranslation from "next-translate/useTranslation";
 import clsx from "clsx";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Seo from "@/components/Seo";
 
 // Dynamic imports
 const Navbar = dynamic(() => import("@/components/Navbar"));
@@ -72,6 +73,7 @@ const Quality = () => {
 
   return (
     <Layout>
+      <Seo title={t("quality")} />
       <div className="!scroll-smooth" ref={rootRef}>
         <main
           className={clsx(
@@ -115,14 +117,25 @@ const Quality = () => {
                         </h2>
                         <div className="relative w-[80%] pb-[80%] sm:pb-[80%] rounded-2xl bg-grey1 flex items-center justify-center shadow-lg group-hover:shadow-none transition-all duration-500">
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <Image
-                              src={item.image}
-                              alt={t(item.heading.split(" ").join(""))}
-                              className="max-h-[90%] p-4"
-                              width={200}
-                              height={100}
-                              loading="lazy"
-                            />
+                            {i <= 1 ? (
+                              <Image
+                                src={item.image}
+                                alt={t(item.heading.split(" ").join(""))}
+                                className="max-h-[90%] p-4"
+                                width={200}
+                                height={100}
+                                priority
+                              />
+                            ) : (
+                              <Image
+                                src={item.image}
+                                alt={t(item.heading.split(" ").join(""))}
+                                className="max-h-[90%] p-4"
+                                width={200}
+                                height={100}
+                                loading="lazy"
+                              />
+                            )}
                           </div>
                         </div>
                         <button
@@ -192,7 +205,7 @@ const Element = ({
             alt={t(selectedElement.heading.split(" ").join(""))}
             fill
             className="p-20"
-            loading="lazy"
+            priority
           />
         </div>
         <div className="flex flex-col md:pt-6 justify-between">

@@ -12,5 +12,6 @@
   "IsoNumber": "ISO 1133",
   "MeltFlowDescription": "The Melt Flow Rate (MFR) test, as per ISO 1133 standards, stands as a crucial method for evaluating the flow properties of High-Density Polyethylene (HDPE) in its molten state. This standardized procedure offers valuable insights into the material's melt viscosity, aiding in the characterization and quality assessment of HDPE",
   "PressureTestDescription": "The Pressure Test measures the resistance of a material to deformation under a known force. This test is essential for assessing the strength and integrity of HDPE pipes under various pressure conditions.",
-  "backButton": "Back"
+  "backButton": "Back",
+  "quality": "Quality"
 }

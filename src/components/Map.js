@@ -49,13 +49,13 @@ const Map = ({ className = "", googleMapClassName = "" }) => {
           >
             <div className="flex flex-col items-center">
               <iframe
+                title="office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.7279235404126!2d100.51906801536877!3d13.734915301383731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2baa0d02a9%3A0x9401eb689b17664!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5gOC4nuC4iuC4o-C4quC4ouC4suC4oSDguJ7guLXguK3guLUg4LmE4Lie4LmJ4Lie4LmMIOC4iOC4s-C4geC4seC4lA!5e0!3m2!1sen!2sth!4v1551173629431"
                 width="100%"
                 height="305"
                 style={{ border: 0 }}
                 allowfullscreen=""
                 loading="lazy"
-                title="Phetsiam PE Pipe Location"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <p className="text-base text-primary mt-3 w-[70%] text-center">
@@ -74,13 +74,13 @@ const Map = ({ className = "", googleMapClassName = "" }) => {
           >
             <div className="flex flex-col items-center">
               <iframe
+                title="factory"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15538.406220293136!2d99.8346496!3d13.1875039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc98f89ec9a19bb72!2z4Lia4Lij4Li04Lip4Lix4LiXIOC5gOC4nuC4iuC4o-C4quC4ouC4suC4oSDguJ7guLXguK3guLXguYTguJ7guYnguJ7guYwg4LiI4Liz4LiB4Lix4LiU!5e0!3m2!1sth!2sth!4v155117"
                 width="100%"
                 height="305"
                 style={{ border: 0 }}
                 allowfullscreen=""
                 loading="lazy"
-                title="Phetsiam PE Pipe Location"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
               <p className="text-base text-primary mt-3 text-center">

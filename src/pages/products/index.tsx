@@ -17,6 +17,7 @@ import SliderLeftArrowIcon from "@/icon/SliderLeftArrowIcon";
 import RightArrowIcon from "@/icon/RightArrowIcon";
 import { categories, products, productsGroups, slugs } from "@/mock/products";
 import dynamic from "next/dynamic";
+import Seo from "@/components/Seo";
 
 // Dynamic imports
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
@@ -36,8 +37,11 @@ const Products = () => {
       });
   }, []);
 
+  const { t } = useTranslation("products");
+
   return (
     <Layout>
+      <Seo title={t("products")} />
       <main className="leading-none overflow-x-hidden !scroll-smooth relative">
         <Navbar bgHeader="!bg-primary" />
         {loaded && (
@@ -65,22 +69,41 @@ const ProductsGroup = ({
   index: number;
 }) => {
   const [showContent, setShowContent] = useState(true);
-
   const [parent] = useAutoAnimate();
-
   const [accordinate] = useAutoAnimate();
-
   const { t } = useTranslation();
 
   return (
     <div>
       <div
         className={clsx(
-          "text-white pt-7 pb-11 sm:pb-[72px] text-center flex items-end h-[374px] relative products-bg-img",
+          "text-white pt-7 pb-11 sm:pb-[72px] text-center flex items-end h-[374px] relative",
           true && "!pb-8"
         )}
-        style={{ backgroundImage: `url(${productsGroup.img})` }}
       >
+        {index < 1 ? (
+          <Image
+            src={productsGroup.img}
+            alt={productsGroup.title}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="absolute inset-0 w-full h-full z-[-1] products-bg-img"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+          />
+        ) : (
+          <Image
+            src={productsGroup.img}
+            alt={productsGroup.title}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            className="absolute inset-0 w-full h-full z-[-1] products-bg-img"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        )}
         {index < 1 && (
           <div className="absolute w-full max-w-primary top-24 left-1/2 px-5 sm:px-20 -translate-x-1/2 z-10 text-white font-light sm:text-xl flex items-center gap-2">
             <Link

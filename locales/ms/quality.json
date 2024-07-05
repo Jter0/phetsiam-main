@@ -12,5 +12,6 @@
   "IsoNumber": "ISO 1133",
   "MeltFlowDescription": "Ujian Kadar Aliran Lebur (MFR) mengikut piawaian ISO 1133, adalah kaedah penting untuk menilai sifat aliran Polietilena Berketumpatan Tinggi (HDPE) dalam keadaan leburannya. Prosedur piawaian ini memberikan pandangan yang berharga tentang kelikatan leburan bahan, membantu dalam pencirian dan penilaian kualiti HDPE.",
   "PressureTestDescription": "Ujian Tekanan mengukur rintangan bahan terhadap deformasi di bawah daya yang diketahui. Ujian ini penting untuk menilai kekuatan dan keintegritasan paip HDPE dalam pelbagai keadaan tekanan.",
-  "backButton": "Kembali"
+  "backButton": "Kembali",
+  "quality": "Kualiti"
 }

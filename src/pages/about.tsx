@@ -214,7 +214,7 @@ function About() {
             alt="white logo"
             width={70}
             height={70}
-            priority
+            loading="lazy"
           />
         </Zoom>
         <Fade direction="up" duration={1500}>
@@ -277,7 +277,7 @@ function About() {
                 <Image
                   src={image}
                   alt="background"
-                  placeholder="blur"
+                  // placeholder="blur"
                   fill
                   objectFit="cover"
                   objectPosition="center"

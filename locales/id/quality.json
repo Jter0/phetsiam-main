@@ -12,5 +12,6 @@
   "IsoNumber": "ISO 1133",
   "MeltFlowDescription": "Uji Laju Aliran Leleh (MFR) sesuai standar ISO 1133, merupakan metode penting untuk mengevaluasi sifat aliran Polietilena Berdensitas Tinggi (HDPE) dalam keadaan lelehannya. Prosedur standar ini memberikan wawasan berharga tentang viskositas leleh bahan, membantu dalam karakterisasi dan penilaian kualitas HDPE.",
   "PressureTestDescription": "Uji Tekanan mengukur ketahanan suatu bahan terhadap deformasi di bawah gaya yang diketahui. Uji ini penting untuk menilai kekuatan dan integritas pipa HDPE di bawah berbagai kondisi tekanan.",
-  "backButton": "Kembali"
+  "backButton": "Kembali",
+  "quality": "Kualitas"
 }

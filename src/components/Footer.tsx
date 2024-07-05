@@ -160,10 +160,11 @@ const Footer = forwardRef(
               </div>
             </div>
 
-            <div className="max-sm:hidden w-fit flex gap-5 mx-auto flex-col !pr-[23px] sc-1100:pr-0 sc-1100:order-3 max-sm:ml-0">
+            <div className="max-sm:hidden flex gap-5 mx-auto flex-col sc-1100:pr-0 sc-1100:order-3">
               <HeadingAndDetails
                 heading={t("common:sitemap")}
                 name={SITE_MAP}
+                className="!w-[100px]"
               />
             </div>
             <div className="sc-1100:order-4 sm:w-fit">
@@ -203,10 +204,11 @@ const Footer = forwardRef(
                 </div>
               </HeadingAndDetails>
             </div>
-            <div className="max-sm:hidden w-fit flex gap-5 mx-auto flex-col">
+            <div className="max-sm:hidden flex gap-5 mx-auto flex-col">
               <HeadingAndDetails
                 heading={t("common:Products")}
                 name={PRODUCTS}
+                className="!w-[100px]"
               />
             </div>
             <div className="flex justify-between sm:hidden max-sm:gap-10">
