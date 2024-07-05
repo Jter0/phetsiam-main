@@ -83,6 +83,7 @@ const ProductsGroup = ({
       >
         {index < 1 ? (
           <Image
+            rel="preload"
             src={productsGroup.img}
             alt={productsGroup.title}
             layout="fill"
