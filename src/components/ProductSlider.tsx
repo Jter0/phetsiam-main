@@ -83,6 +83,7 @@ const ProductSlider = () => {
                 style={{ listStyle: "none" }}
               >
                 <Link
+                  rel="preload"
                   href="#!"
                   className="project-card block cursor-pointer relative md:max-w-max max-w-full h-[500px] md:h-[580px] xl:h-[580px] shadow-[0px_3px_39px_0px_#0000001A] hover:shadow-[0px_4px_24px_0px_#00000040] transition-all overflow-hidden group"
                   key={index}
