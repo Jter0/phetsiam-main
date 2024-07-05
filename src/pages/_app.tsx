@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider enableSystem={true} attribute="class">
       <div className={lexend.className}>
         <Provider store={store}>
+          
           <Component {...pageProps} />
         </Provider>
       </div>
