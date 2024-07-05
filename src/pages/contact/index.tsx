@@ -12,13 +12,14 @@ import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
 import ReCAPTCHA from "react-google-recaptcha";
 import clsx from "clsx";
+import * as v from 'valibot';
 
 const DEFAULT_FIELDS = {
-  name: "",
-  surname: "",
-  email: "",
-  phone: "",
-  message: "",
+  name: v.string().default(""),
+  surname: v.string().default(""),
+  email: v.string().email().default(""),
+  phone: v.string().default(""),
+  message: v.string().default(""),
 };
 
 const Contact = () => {
