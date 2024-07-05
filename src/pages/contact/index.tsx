@@ -15,11 +15,11 @@ import clsx from "clsx";
 import * as v from 'valibot';
 
 const DEFAULT_FIELDS = {
-  name: v.string().default(""),
-  surname: v.string().default(""),
-  email: v.string().email().default(""),
-  phone: v.string().default(""),
-  message: v.string().default(""),
+  name: "",
+  surname: "",
+  email: "",
+  phone: "",
+  message: "",
 };
 
 const Contact = () => {
