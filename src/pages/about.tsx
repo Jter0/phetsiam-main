@@ -281,7 +281,7 @@ function About() {
                   fill
                   objectFit="cover"
                   objectPosition="center"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 50vw"
                   priority
                 />
               </div>
