@@ -106,7 +106,7 @@ const ProjectsSlider = () => {
                       <h3 className="text-xl mb-2 xl:mb-0 xl:text-2xl font-semibold ">
                         {t(card.title)}
                       </h3>
-                      <Button name="discover more">{t("discover_more")}</Button>
+                      {/* <Button name="discover more">{t("discover_more")}</Button> */}
                     </div>
                   </div>
                 </Link>

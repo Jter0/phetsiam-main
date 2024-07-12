@@ -113,9 +113,9 @@ const ProductSlider = () => {
                       <h3 className="text-xl mb-2 xl:mb-0 xl:text-2xl font-semibold ">
                         {t(`productsSection:${card.title}`)}
                       </h3>
-                      <Button name="discover more">
-                        {t("common:discoverMore")}
-                      </Button>
+                      <Link href="/products" passHref>
+              <Button name="discover more">{t("discoverMore")}</Button>
+              </Link>
                     </div>
                   </div>
                 </Link>

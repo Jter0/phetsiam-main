@@ -88,7 +88,7 @@ export default function Home() {
 
               <Link href="/about" passHref>
               <Button name="discover more">{t("discoverMore")}</Button>
-    </Link>
+              </Link>
             </section>
 
             {/* SHOWCASE */}
