@@ -153,7 +153,7 @@ function ProductShowcaseSlider() {
                         loading="lazy"
                       />
                       <div className="product-showcase-slide-overlay absolute top-0 left-0 w-full h-full"></div>
-                      <PlayBtnIcon className="play-btn text-[#EDF1FE] hover:text-primary transition-all duration-300 ease-in-out absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 " />
+                      {/* <PlayBtnIcon className="play-btn text-[#EDF1FE] hover:text-primary transition-all duration-300 ease-in-out absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 " /> */}
                     </div>
                   </SwiperSlide>
                 );
