@@ -1,17 +1,12 @@
 {
   "title": "Produk",
-  "PE Pipes": "Paip PE",
-  "PE Fittings": "Alat Sambung PE",
-  "PB Pipes": "Paip PB",
-  "PB Fittings": "Alat Sambung PB",
-  "EFlex Pipes": "Paip EFlex",
-  "EFlex Fittings": "Alat Sambung EFlex",
-  "HDPE Pipes": "Paip HDPE",
-  "HDPE Fittings": "Alat Sambung HDPE",
-  "PP Pipes": "Paip PP",
-  "PP Fittings": "Alat Sambung PP",
-  "PVC Pipes": "Paip PVC",
-  "PVC Fittings": "Alat Sambung PVC",
-  "PE Accessories": "Aksesori PE",
-  "PB Accessories": "Aksesori PB"
+  "PB Water Pipes": "Paip Air PB",
+  "Geomembranes": "Geomembran",
+  "HDPE Water Pipes": "Paip Air HDPE",
+  "Eflex Electrical Conduits": "Saluran Elektrik Eflex",
+  "HDPE Electrical Conduits": "Saluran Elektrik HDPE",
+  "Nonwoven Geotextile": "Geotekstil Bukan Tenunan",
+  "Geotube": "Geotube",
+  "Concrete Mattress": "Tilam Konkrit",
+  "GCCM Concrete Geocomposite": "Geokomposit Konkrit GCCM"
 }

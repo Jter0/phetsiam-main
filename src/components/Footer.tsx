@@ -134,7 +134,7 @@ const Footer = forwardRef(
           {showSponsersSlider && <SponsersSlider />}
           <div className="sm:py-20 sm:px-20 justify-around max-sm:justify-items-center py-10 sm:p-20 grid grid-cols-1 sm:grid-cols-2 sc-1100:grid-cols-4 gap-10 sc-1100:justify-items-center">
             <div className="flex flex-col max-sm:items-center max-sm:text-center">
-              <Link rel="preload" href="/" aria-label="Logo">
+              <Link href="/" aria-label="Logo">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="113"

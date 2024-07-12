@@ -12,7 +12,6 @@ import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
 import ReCAPTCHA from "react-google-recaptcha";
 import clsx from "clsx";
-import * as v from 'valibot';
 
 const DEFAULT_FIELDS = {
   name: "",

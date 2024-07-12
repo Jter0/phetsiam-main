@@ -13,28 +13,40 @@ SwiperCore.use([Navigation]);
 
 const products = [
   {
-    image: "/img/products/product-card-1-img.webp",
-    title: "PE Pipes",
+    image: "/img/products/PB.webp",
+    title: "PB Water Pipes",
   },
   {
-    image: "/img/products/product-card-2-img.webp",
-    title: "PE Fittings",
+    image: "/img/products/HDPE-Liner.webp",
+    title: "Geomembranes",
   },
   {
-    image: "/img/products/product-card-3-img.webp",
-    title: "PB Pipes",
+    image: "/img/products/HDPE-Fab.webp",
+    title: "HDPE Water Pipes",
   },
   {
-    image: "/img/products/product-card-4-img.webp",
-    title: "PB Fittings",
+    image: "/img/products/Eflex.webp",
+    title: "Eflex Electrical Conduits",
   },
   {
-    image: "/img/products/product-card-5-img.webp",
-    title: "EFlex Pipes",
+    image: "/img/products/HDPE-Electricity.webp",
+    title: "HDPE Electrical Conduits",
   },
   {
-    image: "/img/products/product-card-6-img.webp",
-    title: "EFlex Fittings",
+    image: "/img/products/Non-Woven.webp",
+    title: "Nonwoven Geotextile",
+  },
+  {
+    image: "/img/products/Geotube.webp",
+    title: "Geotube",
+  },
+  {
+    image: "/img/products/Concerete-Mattress.webp",
+    title: "Concrete Mattress",
+  },
+  {
+    image: "/img/products/GCCM.webp",
+    title: "GCCM Concrete Geocomposite",
   },
 ];
 
@@ -83,7 +95,6 @@ const ProductSlider = () => {
                 style={{ listStyle: "none" }}
               >
                 <Link
-                  rel="preload"
                   href="#!"
                   className="project-card block cursor-pointer relative md:max-w-max max-w-full h-[500px] md:h-[580px] xl:h-[580px] shadow-[0px_3px_39px_0px_#0000001A] hover:shadow-[0px_4px_24px_0px_#00000040] transition-all overflow-hidden group"
                   key={index}

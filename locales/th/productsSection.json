@@ -1,17 +1,12 @@
 {
   "title": "ผลิตภัณฑ์",
-  "PE Pipes": "ท่อ PE",
-  "PE Fittings": "อุปกรณ์เชื่อมต่อ PE",
-  "PB Pipes": "ท่อ PB",
-  "PB Fittings": "อุปกรณ์เชื่อมต่อ PB",
-  "EFlex Pipes": "ท่อ EFlex",
-  "EFlex Fittings": "อุปกรณ์เชื่อมต่อ EFlex",
-  "HDPE Pipes": "ท่อ HDPE",
-  "HDPE Fittings": "อุปกรณ์เชื่อมต่อ HDPE",
-  "PP Pipes": "ท่อ PP",
-  "PP Fittings": "อุปกรณ์เชื่อมต่อ PP",
-  "PVC Pipes": "ท่อ PVC",
-  "PVC Fittings": "อุปกรณ์เชื่อมต่อ PVC",
-  "PE Accessories": "อุปกรณ์เสริม PE",
-  "PB Accessories": "อุปกรณ์เสริม PB"
+  "PB Water Pipes": "ท่อน้ำ PB",
+  "Geomembranes": "Geomembrane",
+  "HDPE Water Pipes": "ท่อน้ำ HDPE",
+  "Eflex Electrical Conduits": "ท่อไฟฟ้า Eflex",
+  "HDPE Electrical Conduits": "ท่อไฟฟ้า HDPE",
+  "Nonwoven Geotextile": "Geotextile ไม่ทอ",
+  "Geotube": "Geotube",
+  "Concrete Mattress": "เบาะคอนกรีต",
+  "GCCM Concrete Geocomposite": "คอมโพสิตคอนกรีต GCCM"
 }

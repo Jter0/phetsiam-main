@@ -1,17 +1,19 @@
 {
   "qualityAssurance": "Quality Assurance",
-  "elevateProducts": "To elevate our Thai “PS Standard” products to emerge as the leading pipe manufacturer and supplier in Asia.",
-  "deliverQuality": "We deliver unrivaled quality and reliability, all at an affordable price.",
-  "rigorousTesting": "Our products undergo rigorous testing, regardless of its scale, be it in inches or meters.",
-  "excellenceCommitment": "Our commitment to excellence ensures that our HDPE and PB pipes consistently surpass the highest standards of quality and reliability, setting a new benchmark within the industry.",
-  "partnerSCG": "We partner with SCG to use 100% Virgin Material in production.",
+  "elevateProducts": "To elevate our Thai “PS Standard” products to emerge as the leading pipe manufacturer and supplier in Asia. We deliver unrivaled quality and reliability, all at an affordable price. Our commitment to excellence ensures that our HDPE and PB pipes consistently surpass the highest standards of quality and reliability, setting a new benchmark within the industry. We partner with SCG to use 100% Virgin Material in production.",
   "discoverMore": "Discover More",
   "MeltFlow": "Melt Flow",
-  "PressureTest": "Pressure Test",
-  "TensionTest": "Tension Test",
-  "IsoNumber": "ISO 1133",
-  "MeltFlowDescription": "The Melt Flow Rate (MFR) test, as per ISO 1133 standards, stands as a crucial method for evaluating the flow properties of High-Density Polyethylene (HDPE) in its molten state. This standardized procedure offers valuable insights into the material's melt viscosity, aiding in the characterization and quality assessment of HDPE",
-  "PressureTestDescription": "The Pressure Test measures the resistance of a material to deformation under a known force. This test is essential for assessing the strength and integrity of HDPE pipes under various pressure conditions.",
+  "PressureTest": "Pressure",
+  "TensionTest": "Tension",
+  "MeltFlowDescription": "The Melt Flow Rate (MFR) test, as per ISO 1133 standards, is for evaluating the flow properties of HDPE in its molten state. Conducting the Melt Flow Rate test is instrumental in achieving desired processing characteristics, ultimately influencing the high standards we achieve with our HDPE pipes. Tap into our extensive experience and range of HDPE and PB pipe products. Contact PS Pipe today.",
   "backButton": "Back",
-  "quality": "Quality"
-}
+  "quality": "Quality",
+  "PressureDescription": "The Internal Pressure Creeping Test, in accordance with ISO 1167 standards, serves as an evaluation method for HDPE, on its resistance to internal pressure over an extended period of time. Conducting the Internal Pressure Creeping Test offers valuable data on our HDPE pipe’s ability to maintain structural integrity over time. Tap into our extensive experience and range of HDPE and PB pipe products. Contact PS Pipe today.",
+  "TensionDescription": "The tension test in accordance with ISO 6259 for HDPE serves to assess the material's mechanical properties under tensile stress. Conducting the test allows us to ensure the integrity of our HDPE pipes exceeds specifications for various applications, for instance, PWA MWA high pressure water pipes. Tap into our extensive experience and range of HDPE and PB pipe products. Contact PS Pipe today.",
+  "LongitudinalDescription": "The Longitudinal Reversion Test assesses HDPE material's stability and structural integrity under elevated temperatures. Conducting the Longitudinal Reversion Test provides us essential insights into our HDPE pipes’ resilience against thermal degradation. Our HDPE pipes maintains structural integrity and performance characteristics under thermal stress, thus, it is used for hot water or industrial processes. Tap into our extensive experience and range of HDPE and PB pipe products. Contact PS Pipe today.",
+  "LongitudinalReversion": "Longitudinal Reversion",
+  "OxidationInductionTime": "Oxidation Induction Time",
+  "OITDescription": "The Oxidation Induction Time (OIT) Test, evaluates  the HDPE’s resistance to oxidation, providing valuable insights into its thermal stability. Conducting the Oxidation Induction Time Test provides us with data on HDPE pipes’ susceptibility to Oxidation. This information is crucial for us to optimise our HDPE pipes raw materials to maintain its characteristics in different temperatures. Tap into our extensive experience and range of HDPE and PB pipe products. Contact PS Pipe today.",
+  "Pipelinetesting": "Pipeline testing service",
+  "PipelineDescription": "Partnering with DTS Construction (an INGU's Pipers® partner) We are committed to serving our clients after delivery and ensuring satisfaction throughout the entire product lifecycle. We have established partnerships with DTS Construction to bring you a world-class solution to detecting pipeline leaks, build up, or changes at a competitive price. INGU’s Pipers® solution pairs a baseball-sized, AI powered free-floating multi sensor system. The Pipers® solution accurately identifies and locate potential issues such as leaks, build up, or changes in the pipeline wall without the need for external reference devices. Tap into the predictive power of AI and advanced technology with our solution partners."
+} 

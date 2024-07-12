@@ -14,23 +14,27 @@ SwiperCore.use([Navigation]);
 const projectCards = [
   {
     image: "/img/projects/project-card-1-img.webp",
-    title: "PTT Project",
+    title: "MRT Blue Line Project",
   },
   {
     image: "/img/projects/project-card-2-img.webp",
-    title: "MRT Blue Line Project",
+    title: "PTT Project",
+  },
+  {
+    image: "/img/projects/Muangthong Farm Project.webp",
+    title: "Muangthong Farm Project",
   },
   {
     image: "/img/projects/project-card-3-img.webp",
     title: "Phuket Airport Project",
   },
   {
-    image: "/img/projects/project-card-4-img.webp",
+    image: "/img/projects/project-card-5-img.webp",
     title: "MRT Green Line Project",
   },
   {
-    image: "/img/projects/project-card-5-img.webp",
-    title: "MRT Red Line Project",
+    image: "/img/projects/Phetburi Lining Project.webp",
+    title: "Phetburi Lining Project",
   },
   {
     image: "/img/projects/project-card-6-img.webp",
@@ -84,7 +88,6 @@ const ProjectsSlider = () => {
                 style={{ listStyle: "none" }}
               >
                 <Link
-                  rel="preload" 
                   href="#!"
                   className="project-card block cursor-pointer relative md:max-w-max max-w-full h-[500px] md:h-[580px] xl:h-[580px] shadow-[0px_3px_39px_0px_#0000001A] hover:shadow-[0px_4px_24px_0px_#00000040] transition-all overflow-hidden group"
                   key={index}

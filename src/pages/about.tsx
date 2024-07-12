@@ -124,8 +124,8 @@ function About() {
         data-aos="zoom-in"
         className="relative h-screen flex justify-center items-center w-full md:w-[35rem] lg:w-[25rem] text-md text-center text-white"
       >
-        <div className="text absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full">
-          {t("trustedText")}
+        <div className="text absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:w-[17rem]">
+          {t("for20Years")}
         </div>
       </div>,
       <div
@@ -218,7 +218,7 @@ function About() {
           />
         </Zoom>
         <Fade direction="up" duration={1500}>
-          <div className="text-white text-md text-center md:w-[15rem]">
+          <div className="text-white text-md text-center md:w-[25rem]">
             {t("trustedProvider")}
           </div>
         </Fade>
@@ -281,7 +281,7 @@ function About() {
                   fill
                   objectFit="cover"
                   objectPosition="center"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                   priority
                 />
               </div>

@@ -1,17 +1,12 @@
 {
   "title": "Products",
-  "PE Pipes": "PE Pipes",
-  "PE Fittings": "PE Fittings",
-  "PB Pipes": "PB Pipes",
-  "PB Fittings": "PB Fittings",
-  "EFlex Pipes": "EFlex Pipes",
-  "EFlex Fittings": "EFlex Fittings",
-  "HDPE Pipes": "HDPE Pipes",
-  "HDPE Fittings": "HDPE Fittings",
-  "PP Pipes": "PP Pipes",
-  "PP Fittings": "PP Fittings",
-  "PVC Pipes": "PVC Pipes",
-  "PVC Fittings": "PVC Fittings",
-  "PE Accessories": "PE Accessories",
-  "PB Accessories": "PB Accessories"
+  "PB Water Pipes": "PB Water Pipes",
+  "Geomembranes": "Geomembranes",
+  "HDPE Water Pipes": "HDPE Water Pipes",
+  "Eflex Electrical Conduits": "Eflex Electrical Conduits",
+  "HDPE Electrical Conduits": "HDPE Electrical Conduits",
+  "Nonwoven Geotextile": "Nonwoven Geotextiles",
+  "Geotube": "Geotubes",
+  "Concrete Mattress": "Concrete Mattress",
+  "GCCM Concrete Geocomposite": "GCCM Concrete Geocomposites"
 }

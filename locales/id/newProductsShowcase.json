@@ -1,9 +1,15 @@
 {
-  "PB AccessoriesTit": "Aksesoris PB",
-  "PE AccessoriesTit": "Aksesoris PE",
-  "EFlexTit": "EFlex",
-  "PB AccessoriesDes": "Ini adalah fakta yang telah lama diketahui bahwa seorang pembaca akan terganggu oleh konten yang dapat dibaca...",
-  "PE AccessoriesDes": "Ini adalah fakta yang telah lama diketahui bahwa seorang pembaca akan terganggu oleh konten yang dapat dibaca...",
-  "EFlexDes": "Ini adalah fakta yang telah lama diketahui bahwa seorang pembaca akan terganggu oleh konten yang dapat dibaca...",
+  "Common HDPE Pipe TypesTit": "Jenis Pipa HDPE Umum",
+  "Common HDPE Pipe TypesDes": "Artikel ini membahas jenis pipa HDPE umum, menyoroti karakteristik unik dan aplikasinya.",
+  "What are ID OD for pipesTit": "Apa itu ID OD untuk pipa?",
+  "What are ID OD for pipesDes": "Memilih pipa yang tepat sangat penting dalam proyek, dan memahami nilai ID (Diameter Dalam) dan OD (Diameter Luar) berperan penting dalam perhitungan aliran, penahan beban, dan instalasi pipa.",
+  "What are HDPE SheetTit": "Apa itu Lembar HDPE atau Geomembran?",
+  "What are HDPE SheetDes": "Apa itu Lembar HDPE atau Geomembran? Definisi, Komposisi, Aplikasi Geomembran HDPE",
+  "What is PB PipeTit": "Apa itu Pipa PB?",
+  "What is PB PipeDes": "Pengenalan Pipa PB (Polybutylene), juga dikenal sebagai pipa PB, adalah bahan yang populer di banyak industri karena daya tahan dan fleksibilitasnya yang tinggi.",
+  "What is HDPE PipeTit": "Apa itu Pipa HDPE?",
+  "What is HDPE PipeDes": "Pipa High-Density Polyethylene (HDPE) adalah salah satu solusi perpipaan yang paling serbaguna dan banyak digunakan secara global, khususnya di kawasan Thai-Asia.",
+  "Pressure Nominal of PipesTit": "Tekanan Nominal: Apa yang Perlu Anda Ketahui",
+  "Pressure Nominal of PipesDes": "Artikel ini bertujuan untuk memberikan informasi lengkap tentang PN pada pipa PB, termasuk perhitungannya, makna, dan cara memilih PN yang sesuai.",
   "discover_more": "Temukan Lebih Banyak"
 }

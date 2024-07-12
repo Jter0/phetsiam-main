@@ -1,17 +1,12 @@
 {
   "title": "Produk",
-  "PE Pipes": "Pipa PE",
-  "PE Fittings": "Fitting PE",
-  "PB Pipes": "Pipa PB",
-  "PB Fittings": "Fitting PB",
-  "EFlex Pipes": "Pipa EFlex",
-  "EFlex Fittings": "Fitting EFlex",
-  "HDPE Pipes": "Pipa HDPE",
-  "HDPE Fittings": "Fitting HDPE",
-  "PP Pipes": "Pipa PP",
-  "PP Fittings": "Fitting PP",
-  "PVC Pipes": "Pipa PVC",
-  "PVC Fittings": "Fitting PVC",
-  "PE Accessories": "Aksesoris PE",
-  "PB Accessories": "Aksesoris PB"
+  "PB Water Pipes": "Pipa Air PB",
+  "Geomembranes": "Geomembran",
+  "HDPE Water Pipes": "Pipa Air HDPE",
+  "Eflex Electrical Conduits": "Kanal Listrik Eflex",
+  "HDPE Electrical Conduits": "Kanal Listrik HDPE",
+  "Nonwoven Geotextile": "Geotekstil Nonwoven",
+  "Geotube": "Geotube",
+  "Concrete Mattress": "Kasur Beton",
+  "GCCM Concrete Geocomposite": "Komposit Geotekstil Beton GCCM"
 }

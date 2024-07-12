@@ -1,9 +1,15 @@
 {
-  "PB AccessoriesTit": "Phụ kiện PB",
-  "PE AccessoriesTit": "Phụ kiện PE",
-  "EFlexTit": "EFlex",
-  "PB AccessoriesDes": "Đây là một sự thật lâu đời rằng người đọc sẽ bị phân tâm bởi nội dung dễ đọc...",
-  "PE AccessoriesDes": "Đây là một sự thật lâu đời rằng người đọc sẽ bị phân tâm bởi nội dung dễ đọc...",
-  "EFlexDes": "Đây là một sự thật lâu đời rằng người đọc sẽ bị phân tâm bởi nội dung dễ đọc...",
+  "Common HDPE Pipe TypesTit": "Các loại ống HDPE phổ biến",
+  "Common HDPE Pipe TypesDes": "Bài viết này khám phá các loại ống HDPE phổ biến, nêu bật các đặc điểm và ứng dụng độc đáo của chúng.",
+  "What are ID OD for pipesTit": "ID và OD cho ống là gì?",
+  "What are ID OD for pipesDes": "Việc lựa chọn ống đúng rất quan trọng trong các dự án, và việc hiểu các giá trị ID (Đường kính trong) và OD (Đường kính ngoài) đóng vai trò quan trọng trong tính toán lưu lượng, chịu trọng lượng và lắp đặt ống.",
+  "What are HDPE SheetTit": "HDPE Sheet hoặc Geomembrane là gì?",
+  "What are HDPE SheetDes": "HDPE Sheet hoặc Geomembrane là gì? Định nghĩa, Thành phần, Ứng dụng của Geomembrane HDPE",
+  "What is PB PipeTit": "PB Pipe là gì?",
+  "What is PB PipeDes": "Giới thiệu PB (Polybutylene) pipes, còn được gọi là PB pipes, là vật liệu phổ biến trong nhiều ngành công nghiệp do độ bền cao và tính linh hoạt của chúng.",
+  "What is HDPE PipeTit": "HDPE Pipe là gì?",
+  "What is HDPE PipeDes": "Ống Polyethylene mật độ cao (HDPE) là một trong những giải pháp ống đa năng và được sử dụng rộng rãi nhất trên toàn cầu, đặc biệt là ở khu vực Thái-Á.",
+  "Pressure Nominal of PipesTit": "Áp suất danh định: Những gì bạn cần biết",
+  "Pressure Nominal of PipesDes": "Bài viết này nhằm cung cấp thông tin toàn diện về PN trong ống PB, bao gồm cách tính, ý nghĩa và cách chọn PN phù hợp.",
   "discover_more": "Khám phá thêm"
 }

@@ -97,7 +97,6 @@ export default function SubProduct() {
                     alt="Products Background"
                     layout="fill"
                     objectFit="cover"
-                    loading="lazy"
                   />
                 </div>
               )}

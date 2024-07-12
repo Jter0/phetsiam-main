@@ -1,17 +1,12 @@
 {
   "title": "ផលិតផល",
-  "PE Pipes": "ចុះ PE",
-  "PE Fittings": "ឧបករណ៍ចុះ PE",
-  "PB Pipes": "ចុះ PB",
-  "PB Fittings": "ឧបករណ៍ចុះ PB",
-  "EFlex Pipes": "ចុះ EFlex",
-  "EFlex Fittings": "ឧបករណ៍ចុះ EFlex",
-  "HDPE Pipes": "ចុះ HDPE",
-  "HDPE Fittings": "ឧបករណ៍ចុះ HDPE",
-  "PP Pipes": "ចុះ PP",
-  "PP Fittings": "ឧបករណ៍ចុះ PP",
-  "PVC Pipes": "ចុះ PVC",
-  "PVC Fittings": "ឧបករណ៍ចុះ PVC",
-  "PE Accessories": "ឧបករណ៍ចុះ PE",
-  "PB Accessories": "ឧបករណ៍ចុះ PB"
+  "PB Water Pipes": "បំពង់ទឹក PB",
+  "Geomembranes": "Geomembranes",
+  "HDPE Water Pipes": "បំពង់ទឹក HDPE",
+  "Eflex Electrical Conduits": "បំពង់អគ្គិសនី Eflex",
+  "HDPE Electrical Conduits": "បំពង់អគ្គិសនី HDPE",
+  "Nonwoven Geotextile": "Geotextile មិននស្រួច",
+  "Geotube": "Geotube",
+  "Concrete Mattress": "ក្តារកុងគ្រីត",
+  "GCCM Concrete Geocomposite": "GCCM ឧបករណ៍ស្រួចកុងគ្រីត"
 }

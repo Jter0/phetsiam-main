@@ -41,7 +41,7 @@ export default function Home() {
                   <div className="relative z-[1]">
                     <div className="square welcome-image">
                       <Image
-                        src="/img/welcome-section-img.webp"
+                        src="/img/welcome-section-im.webp"
                         alt="welcome section image"
                         className="2xl:w-[740px] shadow-[0_4px_24px_0px_rgba(0,0,0,0.25)] xl:w-[600px] w-[570px]"
                         width={700}

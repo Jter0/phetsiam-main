@@ -210,7 +210,7 @@ const NavbarInner = ({
           animate={isNavOpen ? "open" : "closed"}
         >
           <div className="max-w-primary py-3 sc-1100:px-8 px-5 mx-auto flex items-center justify-between">
-            <Link rel="preload" href={"/"} aria-label="Logo">
+            <Link href={"/"} aria-label="Logo">
               <Logo className="xl:h-[45px] h-10" />
             </Link>
             <div

@@ -1,17 +1,12 @@
 {
   "title": "Sản phẩm",
-  "PE Pipes": "Ống PE",
-  "PE Fittings": "Phụ kiện PE",
-  "PB Pipes": "Ống PB",
-  "PB Fittings": "Phụ kiện PB",
-  "EFlex Pipes": "Ống EFlex",
-  "EFlex Fittings": "Phụ kiện EFlex",
-  "HDPE Pipes": "Ống HDPE",
-  "HDPE Fittings": "Phụ kiện HDPE",
-  "PP Pipes": "Ống PP",
-  "PP Fittings": "Phụ kiện PP",
-  "PVC Pipes": "Ống PVC",
-  "PVC Fittings": "Phụ kiện PVC",
-  "PE Accessories": "Phụ kiện PE",
-  "PB Accessories": "Phụ kiện PB"
+  "PB Water Pipes": "Ống nước PB",
+  "Geomembranes": "Geomembrane",
+  "HDPE Water Pipes": "Ống nước HDPE",
+  "Eflex Electrical Conduits": "Ống dẫn điện Eflex",
+  "HDPE Electrical Conduits": "Ống dẫn điện HDPE",
+  "Nonwoven Geotextile": "Vải địa kỹ thuật không dệt",
+  "Geotube": "Geotube",
+  "Concrete Mattress": "Nệm bê tông",
+  "GCCM Concrete Geocomposite": "Vật liệu địa kỹ thuật bê tông GCCM"
 }

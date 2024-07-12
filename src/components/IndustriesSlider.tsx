@@ -9,52 +9,38 @@ import useTranslation from "next-translate/useTranslation";
 
 const industries = [
   {
-    name: "Transportation",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content...",
-    imageURL: "/videos/Industry slider/Energy.mp4",
+    name: "Infrastructure",
+    imageURL: "/videos/Industry slider/Infrastructure.mp4",
     link: "/",
   },
   {
-    name: "Waste",
-    description:
-      "Geosynthetics are essential for creating safe barriers for containment and protection in waste management.",
+    name: "Farming",
     imageURL: "/videos/Industry slider/Farming.mp4",
     link: "/",
   },
   {
-    name: "Water",
-    description:
-      "Our engineered solutions safeguard water resources, shorelines and waterways against disasters, water loss and contamination.",
+    name: "Industry",
     imageURL: "/videos/Industry slider/Industry.mp4",
     link: "/",
   },
   {
     name: "Mining",
-    description:
-      "Our geosynthetic solutions for mining boost efficiency, safely recover materials, and support infrastructure.",
-    imageURL: "/videos/Industry slider/Infrastructure.mp4",
-    link: "/",
-  },
-  {
-    name: "Energy",
-    description:
-      "Geosynthetics provide valuable solutions in construction and operation of natural energy resources and energy facilities.",
-    imageURL: "/videos/Industry slider/Megastructures.mp4",
-    link: "/",
-  },
-  {
-    name: "Agriculture",
-    description:
-      "Geosynthetics enhance agricultural efficiency, protect crops, manage water, control erosion, and optimize growing conditions.",
     imageURL: "/videos/Industry slider/Mining.mp4",
     link: "/",
   },
   {
-    name: "Site development",
-    description:
-      "Geosynthetics have become an essential component in efficient, cost effective and sustainable construction.",
+    name: "Megastructures",
+    imageURL: "/videos/Industry slider/Megastructures.mp4",
+    link: "/",
+  },
+  {
+    name: "Transport",
     imageURL: "/videos/Industry slider/Transport.mp4",
+    link: "/",
+  },
+  {
+    name: "Energy",
+    imageURL: "/videos/Industry slider/Energy.mp4",
     link: "/",
   },
 ];
