@@ -85,7 +85,7 @@ export default function Home() {
                 {t("whyChooseUsMessage")}
               </h3>
 
-              <Button name="discover more">{t("discoverMore")}</Button>
+              {/* <Button name="discover more">{t("discoverMore")}</Button> */}
             </section>
 
             {/* SHOWCASE */}
