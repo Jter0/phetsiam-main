@@ -93,9 +93,9 @@ const Card = ({ card }: { card: ProjectCardType }) => {
           {showDetails && (
             <p className="font-light leading-5">{t(card.content)}</p>
           )}
-          <Button name="discover more" className="text-lg">
+          {/* <Button name="discover more" className="text-lg">
             {t("discover_more")}
-          </Button>
+          </Button> */}
         </div>
       </div>
     </Link>

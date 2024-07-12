@@ -4,6 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import Seo from "@/components/Seo";
 import Layout from "@/components/Layout";
 import Footer from "@/components/Footer";
+import Link from 'next/link';
 
 const ProductSlider = dynamic(() => import("@/components/ProductSlider"));
 const ProductShowcaseSlider = dynamic(
@@ -85,7 +86,9 @@ export default function Home() {
                 {t("whyChooseUsMessage")}
               </h3>
 
-              {/* <Button name="discover more">{t("discoverMore")}</Button> */}
+              <Link href="/about" passHref>
+              <Button name="discover more">{t("discoverMore")}</Button>
+    </Link>
             </section>
 
             {/* SHOWCASE */}
