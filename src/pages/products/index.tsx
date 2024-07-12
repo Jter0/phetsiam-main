@@ -330,12 +330,12 @@ const CategoryGroup = ({
         </div>
 
         <div className="flex justify-between items-center relative w-full max-[1100px]:mt-10">
-          <SliderLeftArrowIcon
+          {/* <SliderLeftArrowIcon
             className={clsx(
               `product${index}-slider-prev-btn text-primary absolute sm:-left-16 sm:top-1/2 -top-4 -translate-y-1/2 sm:right-20 right-14 hover:sm:-translate-x-3 sm:transition-all sm:duration-300 projects-slider-prev-btn z-10 sm:w-[58px] sm:h-[35px] w-[48px]`,
               categoryProducts.length < 2 && "max-sc-768:!hidden"
             )}
-          />
+          /> */}
 
           <Swiper
             id={`product${index}`}
@@ -388,12 +388,12 @@ const CategoryGroup = ({
             ))}
           </Swiper>
 
-          <SliderRightArrowIcon
+          {/* <SliderRightArrowIcon
             className={clsx(
               `product${index}-slider-next-btn text-primary absolute sm:-right-16 sm:top-1/2 -top-4 right-0 -translate-y-1/2 sm:transition-all sm:duration-300 sm:ease-in-out projects-slider-next-btn sm:w-[58px] sm:h-[35px] hover:sm:translate-x-3 w-[48px]`,
               categoryProducts.length < 2 && "max-sc-768:!hidden"
             )}
-          />
+          /> */}
         </div>
       </div>
     </div>
