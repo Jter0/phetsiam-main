@@ -250,8 +250,8 @@ export default function IndustriesSlider() {
                       name="discover more"
                       className="text-white z-50 relative"
                     >
-                      {t("discover_more")} */}
-                    </Button>
+                      {t("discover_more")}
+                    </Button> */}
                   </div>
                 </SwiperSlide>
               );
