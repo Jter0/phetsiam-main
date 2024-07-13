@@ -15,38 +15,47 @@ const products = [
   {
     image: "/img/products/PB.webp",
     title: "PB Water Pipes",
+    url: "/sub-products/pb-pipes%20and%20fittings"
   },
   {
     image: "/img/products/HDPE-Liner.webp",
     title: "Geomembranes",
+    url: "/sub-products/hdpe-pipes%20and%20fittings"
   },
   {
     image: "/img/products/HDPE-Fab.webp",
     title: "HDPE Water Pipes",
+    url: "/sub-products/"
   },
   {
     image: "/img/products/Eflex.webp",
     title: "Eflex Electrical Conduits",
+    url: "/sub-products/hdpe-conduit"
   },
   {
     image: "/img/products/HDPE-Electricity.webp",
     title: "HDPE Electrical Conduits",
+    url: "/sub-products/hdpe-eflex"
   },
   {
     image: "/img/products/Non-Woven.webp",
     title: "Nonwoven Geotextile",
+    url: "/sub-products/geotextiles-nonwoven"
   },
   {
     image: "/img/products/Geotube.webp",
     title: "Geotube",
+    url: "/sub-products/geotubes-geotube"
   },
   {
     image: "/img/products/Concerete-Mattress.webp",
     title: "Concrete Mattress",
+    url: "/sub-products/geocomposites-concrete%20mattress"
   },
   {
     image: "/img/products/GCCM.webp",
     title: "GCCM Concrete Geocomposite",
+    url: "/sub-products/geocomposites-gccm"
   },
 ];
 
@@ -113,9 +122,9 @@ const ProductSlider = () => {
                       <h3 className="text-xl mb-2 xl:mb-0 xl:text-2xl font-semibold ">
                         {t(`productsSection:${card.title}`)}
                       </h3>
-                      <Link href="/products" passHref>
-              <Button name="discover more">{t("discoverMore")}</Button>
-              </Link>
+                      <Link href={t(`productsSection:${card.url}`)} passHref>
+                        <Button name="discover more">{t("discoverMore")}</Button>
+                      </Link>
                     </div>
                   </div>
                 </Link>
