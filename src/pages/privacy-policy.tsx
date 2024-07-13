@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
           <main className={`leading-none overflow-x-hidden scroll-smooth`}>
             <Navbar bgHeader="!bg-primary" />
             <section className="bg-white mt-16 min-h-screen">
-              <section className="container-size pt-[3rem] pb-[6rem] text-dark">
+              <section className="container-size pt-[3rem] pb-[6rem] text-black">
                 <h1>Privacy Notice</h1>
                 <p>Phetsiam PE Pipe Co., Ltd and its affiliates (as listed in the annex and hereinafter collectively referred to as "we") respect the rights to privacy of our customers (hereinafter referred to as "you"). To ensure that your personal data is protected, we have created this privacy notice to inform the details regarding the collection, use, disclosure, deletion, and destruction (collectively, the "processing ") of your personal data, both online and other channels, in accordance with the personal data protection law.</p>
 
