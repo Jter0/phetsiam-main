@@ -31,19 +31,11 @@ const Footer = forwardRef(
     const PRODUCTS = [
       {
         name: "PE Pipes",
-        link: "/",
+        link: "https://nextjs32.pspipe.co.th/th/sub-products/hdpe-pipes%20and%20fittings",
       },
       {
         name: "PE Accessories",
-        link: "/",
-      },
-      {
-        name: "PB Pipes",
-        link: "/",
-      },
-      {
-        name: "PB Accessories",
-        link: "/",
+        link: "https://nextjs32.pspipe.co.th/th/sub-products/pb-pipes%20and%20fittings",
       },
     ];
     const SITE_MAP = [
@@ -113,7 +105,7 @@ const Footer = forwardRef(
                   >
                     {SITE_MAP.includes(item)
                       ? t(`common:${item.name}`)
-                      : t(`productsSection:${item.name}`)}
+                      : t(`${item.name}`)}
                   </Link>
                 </div>
               );
