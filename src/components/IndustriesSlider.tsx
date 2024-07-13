@@ -246,11 +246,11 @@ export default function IndustriesSlider() {
                     >
                       {t(`${industry.name}Description`)}
                     </motion.p>
-                    <Button
+                    {/* <Button
                       name="discover more"
                       className="text-white z-50 relative"
                     >
-                      {t("discover_more")}
+                      {t("discover_more")} */}
                     </Button>
                   </div>
                 </SwiperSlide>
