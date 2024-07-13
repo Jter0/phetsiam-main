@@ -18,37 +18,9 @@ const PrivacyPolicy = () => {
             <Navbar bgHeader="!bg-primary" />
             <section className="bg-white mt-16 min-h-screen">
               <section className="container-size pt-[3rem] pb-[6rem]">
-                <h1 className="text-primary font-semibold text-[2rem] border-b border-gray-300 pb-1">
+                <p className="text-primary font-semibold text-[2rem] border-b border-gray-300 pb-1">
                   {t("privacyPolicy")}
-                </h1>
-                <div className="text-xl text-[#000008] mt-10">
-                  {t("introduction")}
-                </div>
-
-                <div className="text-[#000008] font-extralight leading-7 mt-3">
-                  {t("introductionDetails")}
-                </div>
-                <div className="text-xl text-[#000008] mt-10">
-                  {t("whyProcessPersonalDataTitle")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3">
-                  {t("whyProcessPersonalDataDetails")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3">
-                  {t("legitimateInterestsDetails")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3 ml-10">
-                  {t("legitimateInterestsSubDetails1")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3 ml-10">
-                  {t("legitimateInterestsSubDetails2")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3 ml-10">
-                  {t("legitimateInterestsSubDetails3")}
-                </div>
-                <div className="text-[#000008] font-extralight leading-7 mt-3 ml-10">
-                  {t("legitimateInterestsSubDetails4")}
-                </div>
+                </p>
               </section>
             </section>
             <Footer customStyle="!static" />
