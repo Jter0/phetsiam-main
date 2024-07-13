@@ -52,10 +52,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div
-                    className="bg-primary xl:absolute relative xl:w-full sc-1100:w-[85%] w-full xl:-mt-0
-                -mt-20  xl:ml-[560px] text-white flex items-center flex-grow 2xl:py-32 sm:pb-16 xl:pt-16 pt-28 pb-10 px-8 2xl:pl-56 xl:pl-20"
-                  >
+                  <div className="bg-primary xl:absolute relative xl:w-full sc-1100:w-[85%] w-full xl:-mt-0-mt-20  xl:ml-[560px] text-white flex items-center flex-grow 2xl:py-32 sm:pb-16 xl:pt-16 pt-28 pb-10 px-8 2xl:pl-56 xl:pl-20">
                     <div className="flex flex-col md:gap-9 sm:gap-6 gap-4 min-[1600px]:max-w-[750px] sc-1400:max-w-[680px] xl:max-w-[630px]">
                       <h2 className="font-semibold md:text-4xl xl:text-5xl text-3xl">
                         {t("welcomeTitle")}
