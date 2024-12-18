@@ -29,7 +29,7 @@
     "framer-motion": "^11.1.7",
     "gsap": "^3.12.5",
     "instantsearch.js": "^4.68.1",
-    "next": "14.2.3",
+    "next": "14.2.20",
     "next-themes": "^0.2.1",
     "next-translate": "^2.6.2",
     "postcss-import": "^16.1.0",
