@@ -206,7 +206,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <Link
       href={`sub-products/${slug?.text}`}
-      className="mt-5 project-card w-full block cursor-pointer relative md:w-[277px] h-[305px] shadow-[0px_3px_39px_0px_#0000001A] hover:sm:shadow-[0px_4px_24px_0px_#00000040] transition-shadow overflow-hidden group"
+      className="mt-5 project-card w-full block cursor-pointer relative shadow-[0px_3px_39px_0px_#0000001A] hover:sm:shadow-[0px_4px_24px_0px_#00000040] transition-shadow overflow-hidden group"
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
     >
@@ -219,7 +219,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       loading="lazy"
       />
 
-      <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end px-5 pb-10">
+      <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 left-0 top-0 items-start justify-end px-5 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">
           <p className="text-2xl font-bold">{t(product.name)}</p>
           <p className="font-light leading-5 sm:hidden">
