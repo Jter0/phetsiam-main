@@ -215,7 +215,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         alt="pb fitting image"
         width={200}
         height={200}
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="100vw"
         className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
         loading="lazy"
       />
