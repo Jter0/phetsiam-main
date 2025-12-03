@@ -211,18 +211,18 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       onMouseLeave={() => setShowDetails(false)}
     >
       <Image
-  src={product.images[0].src}
-  alt="pb fitting image"
-  width={277}
-  height={305}
-  style={{
-    width: "277px",
-    height: "305px",
-    objectFit: "cover",
-    objectPosition: "center",
-  }}
-  loading="lazy"
-/>
+        src={product.images[0].src}
+        alt="pb fitting image 12"
+        width={277}
+        height={305}
+        style={{
+          width: "277px",
+          height: "305px",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+        loading="lazy"
+      />
 
       <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 left-0 top-0 items-start justify-end px-5 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">
@@ -283,8 +283,8 @@ const CategoryGroup = ({
           productsGroup.title === "Electricity"
             ? "text-[#FF6626]"
             : productsGroup.title === "Geosynthetics"
-            ? "text-[#99DD77]"
-            : "text-primary"
+              ? "text-[#99DD77]"
+              : "text-primary"
         )}
       >
         {t(category.name)}
@@ -379,9 +379,9 @@ const CategoryGroup = ({
                 key={product.name + index}
                 className={clsx(
                   categoryProducts.length === 1 &&
-                    "!w-full max:!min-w-[256px] max-md:!max-w-[256px]",
+                  "!w-full max:!min-w-[256px] max-md:!max-w-[256px]",
                   categoryProducts.length >= 2 &&
-                    "!flex !items-center !justify-center"
+                  "!flex !items-center !justify-center"
                 )}
                 tag="li"
                 style={{
