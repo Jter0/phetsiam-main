@@ -215,8 +215,8 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         alt="pb fitting image"
         width={200}
         height={200}
-        sizes="100vw"
-        className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="h-full w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
         loading="lazy"
       />
       <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end px-5 pb-10">
