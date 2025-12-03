@@ -210,10 +210,10 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
     >
-    
+
       <Image
         src={product.images[0].src}
-        alt="pb fitting image"
+        alt="pb fitting image 22"
         width={277}
         height={305}
         style={{
