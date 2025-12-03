@@ -210,6 +210,19 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
     >
+      <Image
+        src={product.images[0].src}
+        alt="pb fitting image"
+        width={277}
+        height={305}
+        style={{
+          width: "277px",
+          height: "305px",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+        loading="lazy"
+      />
 
       <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 left-0 top-0 items-start justify-end px-5 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">
