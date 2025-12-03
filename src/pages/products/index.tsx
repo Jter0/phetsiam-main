@@ -210,10 +210,10 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
     >
+    
       <Image
         src={product.images[0].src}
         alt="pb fitting image"
-<<<<<<< HEAD
         width={277}
         height={305}
         style={{
@@ -222,12 +222,6 @@ const ProductCard = ({ product }: { product: ProductType }) => {
           objectFit: "cover",
           objectPosition: "center",
         }}
-=======
-        width={200}
-        height={200}
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
->>>>>>> parent of b36e01e (Update index.tsx)
         loading="lazy"
       />
 
