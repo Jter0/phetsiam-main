@@ -206,7 +206,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   return (
     <Link
       href={`sub-products/${slug?.text}`}
-      className="mt-5 project-card w-full block cursor-pointer relative md:w-[305px] h-[305px] shadow-[0px_3px_39px_0px_#0000001A] hover:sm:shadow-[0px_4px_24px_0px_#00000040] transition-shadow overflow-hidden group"
+      className="mt-5 project-card w-full block cursor-pointer relative shadow-[0px_3px_39px_0px_#0000001A] hover:sm:shadow-[0px_4px_24px_0px_#00000040] transition-shadow overflow-hidden group"
       onMouseEnter={() => setShowDetails(true)}
       onMouseLeave={() => setShowDetails(false)}
     >
@@ -215,7 +215,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
         alt="pb fitting image"
         width={200}
         height={200}
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="100vw"
         className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
         loading="lazy"
       />
