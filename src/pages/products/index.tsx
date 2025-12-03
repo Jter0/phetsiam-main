@@ -211,14 +211,14 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       onMouseLeave={() => setShowDetails(false)}
     >
       <Image
-        src={product.images[0].src}
-        alt="pb fitting image"
-        width={200}
-        height={200}
-        sizes="100vw"
-        className="h-full sm:transition-transform w-full object-cover sm:duration-500 sm:ease-in-out group-hover:sm:scale-110 object-center"
-        loading="lazy"
+      src={product.images[0].src}
+      alt="pb fitting image"
+      width={277}
+      height={305}
+      className="w-[277px] h-[305px] object-cover object-center sm:transition-transform sm:duration-500 sm:ease-in-out group-hover:sm:scale-110"
+      loading="lazy"
       />
+
       <div className="absolute bottom-9 text-white flex flex-col sm:transition-all mb-3 bg-black/40 h-full w-full left-0 top-0 items-start justify-end px-5 pb-10">
         <div ref={animate} className="project-card-text flex flex-col gap-2">
           <p className="text-2xl font-bold">{t(product.name)}</p>
